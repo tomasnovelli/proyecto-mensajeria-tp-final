@@ -30,7 +30,7 @@
 .textInput::placeholder{
     color: rgb(58, 58, 58);
 }
-.textInput:target{
+.textInput:focus{
     border-color: red;
 }
 .btn-submit{

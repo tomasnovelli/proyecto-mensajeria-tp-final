@@ -14,7 +14,7 @@ const Chat = () => {
 
   return (
     <div className='body'>
-      <User userName={contactData.nombre} userImg={contactData.thumbnail} userConection={contactData.ultima_conexion} />
+      <User userName={contactData.nombre} userImg={contactData.thumbnail} userId={contactData.id} userConection={contactData.ultima_conexion} />
       <ListChat dataMessage={contactData.mensajes} />
       <WrittingText contactData={contactData} />
     </div>

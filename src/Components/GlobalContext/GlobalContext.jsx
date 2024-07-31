@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { createContext, useContext } from 'react'
 import {  guardarHistorial, obtenerHistorial } from '../../Helpers/chatData'
+import { useParams } from 'react-router-dom'
 
 const GlobalContext = createContext()
 
 export const GlobalContextProvider = ({ children }) => {
 
     const [contactListData, setContactListData] = useState(obtenerHistorial())
-
     const getContactDataById = (id) => contactListData.find(contactos => Number(contactos.id) === Number(id))
-    
+
     const updateContact = (contactData) =>{
         const updatedContactListData = [
             ...contactListData
@@ -27,7 +27,7 @@ export const GlobalContextProvider = ({ children }) => {
                 {
                     getContactDataById,
                     updateContact,
-                    contactListData
+                    contactListData,
                 }
             }>
                 {children}

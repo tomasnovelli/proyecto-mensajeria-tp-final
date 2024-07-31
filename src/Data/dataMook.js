@@ -4,6 +4,7 @@ export const DATA_CONTACTOS = [
         thumbnail: '/images/messi-world-cup.jpg',
         ultima_conexion: 'ayer',
         id: 1,
+        phoneNumber: '+54 9 11 4084-8975',
         mensajes: [
             {
                 author: 'Messi',
@@ -31,6 +32,7 @@ export const DATA_CONTACTOS = [
         id: 2,
         thumbnail: '/images/abuela.jpg',
         ultima_conexion: 'ayer',
+        phoneNumber: '+54 9 11 6498-7894',
         mensajes: [
             {
                 author: 'Abuelita',
@@ -59,6 +61,7 @@ export const DATA_CONTACTOS = [
         id: 3,
         thumbnail: '/images/mollo.jpg',
         ultima_conexion: 'hoy',
+        phoneNumber: '+54 9 11 4789-3145',
         mensajes: [
             {
                 author: 'Mollo',
