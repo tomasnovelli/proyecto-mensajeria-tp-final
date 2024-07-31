@@ -85,5 +85,155 @@ export const DATA_CONTACTOS = [
                 id: 35
             },
         ]
+    },
+    {
+        nombre: 'Mollo',
+        id: 4,
+        thumbnail: '/images/mollo.jpg',
+        ultima_conexion: 'hoy',
+        phoneNumber: '+54 9 11 4789-3145',
+        mensajes: [
+            {
+                author: 'Mollo',
+                text: 'Que hacees viejoo, che tengo dos entradas para el show de mañana te venis?',
+                state: 'visto',
+                date: '15:34',
+                id: 33
+            },
+            {
+                author: 'Yo',
+                text: 'QUEE!? en serio? recontra yendooooo!',
+                state: 'visto',
+                date: '15:45',
+                id: 34
+            },
+            {
+                author: 'Mollo',
+                text: 'EEEESA PAPAA!',
+                state: 'entregado',
+                date: '15:34',
+                id: 35
+            },
+        ]
+    },
+    {
+        nombre: 'Mollo',
+        id: 5,
+        thumbnail: '/images/mollo.jpg',
+        ultima_conexion: 'hoy',
+        phoneNumber: '+54 9 11 4789-3145',
+        mensajes: [
+            {
+                author: 'Mollo',
+                text: 'Que hacees viejoo, che tengo dos entradas para el show de mañana te venis?',
+                state: 'visto',
+                date: '15:34',
+                id: 33
+            },
+            {
+                author: 'Yo',
+                text: 'QUEE!? en serio? recontra yendooooo!',
+                state: 'visto',
+                date: '15:45',
+                id: 34
+            },
+            {
+                author: 'Mollo',
+                text: 'EEEESA PAPAA!',
+                state: 'entregado',
+                date: '15:34',
+                id: 35
+            },
+        ]
+    },
+    {
+        nombre: 'Mollo',
+        id: 6,
+        thumbnail: '/images/mollo.jpg',
+        ultima_conexion: 'hoy',
+        phoneNumber: '+54 9 11 4789-3145',
+        mensajes: [
+            {
+                author: 'Mollo',
+                text: 'Que hacees viejoo, che tengo dos entradas para el show de mañana te venis?',
+                state: 'visto',
+                date: '15:34',
+                id: 33
+            },
+            {
+                author: 'Yo',
+                text: 'QUEE!? en serio? recontra yendooooo!',
+                state: 'visto',
+                date: '15:45',
+                id: 34
+            },
+            {
+                author: 'Mollo',
+                text: 'EEEESA PAPAA!',
+                state: 'entregado',
+                date: '15:34',
+                id: 35
+            },
+        ]
+    },
+    {
+        nombre: 'Mollo',
+        id: 7,
+        thumbnail: '/images/mollo.jpg',
+        ultima_conexion: 'hoy',
+        phoneNumber: '+54 9 11 4789-3145',
+        mensajes: [
+            {
+                author: 'Mollo',
+                text: 'Que hacees viejoo, che tengo dos entradas para el show de mañana te venis?',
+                state: 'visto',
+                date: '15:34',
+                id: 33
+            },
+            {
+                author: 'Yo',
+                text: 'QUEE!? en serio? recontra yendooooo!',
+                state: 'visto',
+                date: '15:45',
+                id: 34
+            },
+            {
+                author: 'Mollo',
+                text: 'EEEESA PAPAA!',
+                state: 'entregado',
+                date: '15:34',
+                id: 35
+            },
+        ]
+    },
+    {
+        nombre: 'Mollo',
+        id: 8,
+        thumbnail: '/images/mollo.jpg',
+        ultima_conexion: 'hoy',
+        phoneNumber: '+54 9 11 4789-3145',
+        mensajes: [
+            {
+                author: 'Mollo',
+                text: 'Que hacees viejoo, che tengo dos entradas para el show de mañana te venis?',
+                state: 'visto',
+                date: '15:34',
+                id: 33
+            },
+            {
+                author: 'Yo',
+                text: 'QUEE!? en serio? recontra yendooooo!',
+                state: 'visto',
+                date: '15:45',
+                id: 34
+            },
+            {
+                author: 'Mollo',
+                text: 'EEEESA PAPAA!',
+                state: 'entregado',
+                date: '15:34',
+                id: 35
+            },
+        ]
     }
 ]

@@ -37,6 +37,6 @@
     border-radius: 18%;
 }
 
-.camera, .telephone, .search{
+.cameraUser, .telephoneUser, .searchUser{
     color: var(--app-color);
 }

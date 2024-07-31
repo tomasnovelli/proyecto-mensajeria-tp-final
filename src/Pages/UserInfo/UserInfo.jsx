@@ -29,15 +29,15 @@ const UserInfo = () => {
                 <span>{phoneNumber}</span>
                 <div className='btnFunctionContainer'>
                     <div className='btnFunction'>
-                        <i className="telephone bi bi-telephone"></i>
+                        <i className="telephoneUser bi bi-telephone"></i>
                         <span>Llamar</span>
                     </div>
                     <div className='btnFunction'>
-                        <i className="camera bi bi-camera-video"></i>
+                        <i className="cameraUser bi bi-camera-video"></i>
                         <span>Video</span>
                     </div>
                     <div className='btnFunction'>
-                        <i className="search bi bi-search"></i>
+                        <i className="searchUser bi bi-search"></i>
                         <span>Buscar</span>
                     </div>
                 </div>
