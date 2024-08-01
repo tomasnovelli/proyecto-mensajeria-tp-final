@@ -7,12 +7,11 @@
     margin: 0;
     padding: 0;
     font-family: montserrat, sans-serif;
-    font-size: 15px;
 }
 
 :root{
     --app-color: rgb(11, 196, 73);
-    --chat-color:#6aff65;
+    --chat-color:#D9FDD3;
     --textArea-color: rgb(238, 237, 237);
     --fontColor: rgb(8, 8, 8);
 }

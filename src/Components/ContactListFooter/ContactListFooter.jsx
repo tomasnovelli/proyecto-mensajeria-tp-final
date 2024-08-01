@@ -3,7 +3,7 @@ import './contactListFooterStyles.css'
 const ContactListFooter = () => {
   return (
     <div className='contactListfooter'>
-      <h1>tu hermana</h1>
+      <h1></h1>
     </div>
   )
 }

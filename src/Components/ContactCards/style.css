@@ -1,6 +1,7 @@
 .contactos{
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 5px;
     margin: 0px 5px 0px 5px;
 }
 .containerImg {
@@ -17,18 +18,28 @@
 .contactCard{
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
     padding: 5px;
 
 }
-.sideInfo{
+.topContactCardInfo{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
 
+}
+.lastConection{
+    font-size: 12px;
+}
 
+.bottomContactCardInfo{
+    width: 100%;
+    display: flex;
+    font-size: 12px;
+    font-weight: 300;
 }
 
 .msjNumber{

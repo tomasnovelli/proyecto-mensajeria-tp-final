@@ -10,7 +10,6 @@ const Message = ({ author, text, date, state }) => {
                 {
                     author == 'Yo'
                         ? <div className='yoMessage'>
-                            <span className='author'>{author}</span>
                             <p className='messageContent'>{text}</p>
                             <div className='footerMessage'>
                                 <span className='date'>{date}</span>

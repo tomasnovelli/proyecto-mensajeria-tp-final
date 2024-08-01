@@ -17,11 +17,12 @@ const ContactCards = ({ contactData }) => {
                 <img className={'img_' + nombre.toLowerCase()} src={thumbnail} alt="" />
             </div>
             <Link className='contactCard' to={'/chat/' + id}>
-                <span>{nombre}</span>
-                <span></span>
-                <div className='sideInfo'>
+                    <div className='topContactCardInfo'>
+                    <span>{nombre}</span>
                     <span className='lastConection'>{ultima_conexion}</span>
-                    <span className='msjNumber'>{mensajes.length}</span>
+                    </div>
+                <div className='bottomContactCardInfo'>
+                    <span className='lastMessage'>ultimo</span>
                 </div>
             </Link>
         </div>
