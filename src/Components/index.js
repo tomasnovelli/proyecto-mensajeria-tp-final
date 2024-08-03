@@ -2,7 +2,7 @@ import ContactCards from "./ContactCards/ContactCards";
 import ContactList from "./ContactList/ContactList";
 import ListChat from "./ListChat/ListChat";
 import Message from "./Message/Message";
-import User from "./User/User";
+import Header from "./Header/Header";
 import WrittingText from "./WrittingText/WrittingText";
 
 
@@ -11,7 +11,7 @@ export{
     ContactList,
     ListChat,
     Message,
-    User,
+    Header,
     WrittingText
 }
 

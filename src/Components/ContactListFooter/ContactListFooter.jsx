@@ -3,7 +3,14 @@ import './contactListFooterStyles.css'
 const ContactListFooter = () => {
   return (
     <div className='contactListfooter'>
-      <h1></h1>
+      <div>
+      <i className="bi bi-chat-left-text-fill"></i>
+        <span>Chats</span>
+      </div>
+      <div>
+      <i className=" telephone bi bi-telephone-fill"></i>
+        <span>Llamadas</span>
+      </div>
     </div>
   )
 }

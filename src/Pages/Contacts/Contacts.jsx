@@ -1,18 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './contacts.css'
 import ContactList from '../../Components/ContactList/ContactList'
 import { useGlobalContext } from '../../Components/GlobalContext/GlobalContext'
-import { User } from '../../Components'
 import ContactListFooter from '../../Components/ContactListFooter/ContactListFooter'
+import { Link } from 'react-router-dom'
+import { Header } from '../../Components'
+import UserInfo from '../UserInfo/UserInfo'
+import Chat from '../Chat/Chat'
+import AddContact from '../AddContact/AddContact'
 
 
 const Contacts = () => {
-    const {contactListData} = useGlobalContext()
+    const { contactListData, handleChangeContent, searchContact } = useGlobalContext()
+    const [contactFooterState, setContactFooterState] = useState()
 
     return (
         <div className='contacts'>
-            <User />
-            <ContactList dataMock={contactListData}/>
+            <Header />
+            <div>
+                <label htmlFor="contactSearh"></label>
+                <input type="text" placeholder='Buscar contacto' name='contactSearch' id='contactSearch' onChange={handleChangeContent} value={searchContact} />
+            </div>
+            <Link to={'/addContact'}>
+                <button>
+                    <i className="bi bi-person-plus-fill"></i>
+                </button>
+            </Link>
+            <ContactList dataMock={contactListData} />
             <ContactListFooter />
         </div>
     )

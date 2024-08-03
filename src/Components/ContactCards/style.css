@@ -3,6 +3,7 @@
     align-items: center;
     gap: 5px;
     margin: 0px 5px 0px 5px;
+    overflow: hidden;
 }
 .containerImg {
     width: 35px;

@@ -37,6 +37,46 @@
     border-radius: 18%;
 }
 
-.cameraUser, .telephoneUser, .searchUser{
+.btnFunction:hover{
+    color: white;
+    background-color: rgba(255, 8, 8, 0.808);
+}
+.ban:hover{
+    color: white;
+}
+
+.telephoneUser, .ban{
     color: var(--app-color);
+}
+
+.switch-button {
+    display: inline-block;
+}
+.switch-button .switch-button__checkbox {
+    display: none;
+}
+.switch-button .switch-button__label {
+    background-color: red;
+    width: 5rem;
+    height: 3rem;
+    border-radius: 3rem;
+    display: inline-block;
+    position: relative;
+}
+.switch-button .switch-button__label:before {
+    transition: .2s;
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 1px black;
+}
+.switch-button .switch-button__checkbox:checked + .switch-button__label {
+    background-color: green;
+}
+.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+    transform: translateX(2rem);
 }

@@ -18,8 +18,8 @@ const UserInfo = () => {
     return (
         <div>
             <div className='userInfoHeader'>
-            <Link to={'/chat/' + id }><i className="backArrow bi bi-arrow-left-short"></i></Link>
-            <i className=" bi bi-three-dots-vertical"></i>
+                <Link to={'/chat/' + id}><i className="backArrow bi bi-arrow-left-short"></i></Link>
+                <i className=" bi bi-three-dots-vertical"></i>
             </div>
             <div className='userInfoCard'>
                 <div className='imgUser'>
@@ -28,19 +28,36 @@ const UserInfo = () => {
                 <h1>{nombre}</h1>
                 <span>{phoneNumber}</span>
                 <div className='btnFunctionContainer'>
-                    <div className='btnFunction'>
+                    <button className='btnFunction'>
                         <i className="telephoneUser bi bi-telephone"></i>
                         <span>Llamar</span>
-                    </div>
-                    <div className='btnFunction'>
-                        <i className="cameraUser bi bi-camera-video"></i>
-                        <span>Video</span>
-                    </div>
-                    <div className='btnFunction'>
-                        <i className="searchUser bi bi-search"></i>
-                        <span>Buscar</span>
+                    </button>
+                    <button className='btnFunction'>
+                        <i className="ban bi bi-ban"></i>
+                        <span>Bloquear</span>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <p>Mereces lo que sueñas</p>
+            </div>
+            <div>
+                <div>
+                    <span>notificaciones</span>
+                    <div className="switch-button">
+                        <label htmlFor="switch-label" className="switch-button__label"></label>
+                        <input type="checkbox" name="switch-button" id="switch-label" className="switch-button__checkbox"></input>
+                        
                     </div>
                 </div>
+                <div>
+                    <h3>Cifrado</h3>
+                    <span>los mensajes están cifrados de extremo a extremo. Haz clic para verificarlo.</span>
+                </div>
+            </div>
+            <div>
+                <button><i className="bi bi-heart"></i></button>
+                <span>Añadir a Favoritos</span>
             </div>
         </div>
     )

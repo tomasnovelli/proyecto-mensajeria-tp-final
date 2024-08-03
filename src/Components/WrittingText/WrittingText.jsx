@@ -1,25 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './writtingText.css'
 import { useGlobalContext } from '../GlobalContext/GlobalContext'
 import { v4 as uuid } from 'uuid'
-import { guardarMensaje } from '../../Helpers/chatData'
 
 const WrittingText = ({ contactData }) => {
 
-  const [messageInput, setMessageInput] = useState('')
-
-  const { updateContact } = useGlobalContext()
-
-
-  const handleChangeContentValue = (e) => {
-    setMessageInput(e.target.value)
-  }
+  const { textInput, handleChangeContentValue, setTextInput, updateContact} = useGlobalContext()
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const nuevoMensaje = {
       author: 'Yo',
-      text: messageInput,
+      text: textInput,
       state: 'entregado',
       date: '13:52',
       id: uuid()
@@ -32,9 +24,8 @@ const WrittingText = ({ contactData }) => {
         ]
     }
     updateContact(updatedContactData)
-    setMessageInput('')
+    setTextInput('')
   }
-
 
   return (
 
@@ -44,7 +35,7 @@ const WrittingText = ({ contactData }) => {
         <div className='textArea'>
           <label htmlFor="text_input"></label>
           <i className="bi bi-emoji-smile smileFace"></i>
-          <input className='textInput' placeholder='Mensaje' type="text" name='text' id='text' onChange={handleChangeContentValue} value={messageInput} />
+          <input className='textInput' placeholder='Mensaje' type="text" name='text' id='text' onChange={handleChangeContentValue} value={textInput} />
           <i className="bi bi-paperclip"></i>
           <i className="bi bi-camera"></i>
         </div>
