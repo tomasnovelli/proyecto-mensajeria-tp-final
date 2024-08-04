@@ -6,7 +6,7 @@ const User = ({ userName, userImg, userConection, userId }) => {
 
   return (
 
-    <div className='userInfo'>
+    <div>
       {
         userName === undefined
           ?

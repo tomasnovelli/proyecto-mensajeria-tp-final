@@ -16,6 +16,9 @@ const Contacts = () => {
 
     return (
         <div className='contacts'>
+            <div className='addContactResponsive'>
+            <AddContact />
+            </div>
             <Header />
             <div>
                 <label htmlFor="contactSearh"></label>
@@ -28,6 +31,7 @@ const Contacts = () => {
             </Link>
             <ContactList dataMock={contactListData} />
             <ContactListFooter />
+
         </div>
     )
 }

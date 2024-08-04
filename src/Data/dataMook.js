@@ -3,7 +3,7 @@ export const DATA_CONTACTOS = [
         nombre: 'Messi',
         thumbnail: '/images/messi-world-cup.jpg',
         ultima_conexion: 'ayer',
-        id: 1,
+        id: '1',
         countryPhoneId:'+54 ', 
         phoneNumber: '9 11 4084-8975',
         mailStorage: 'tomas@gmail.com', 
@@ -31,7 +31,7 @@ export const DATA_CONTACTOS = [
     },
     {
         nombre: 'Abuelita',
-        id: 2,
+        id: '2',
         thumbnail: '/images/abuela.jpg',
         ultima_conexion: 'ayer',
         countryPhoneId:'+54 ',
@@ -62,7 +62,7 @@ export const DATA_CONTACTOS = [
     },
     {
         nombre: 'Mollo',
-        id: 3,
+        id: '3',
         thumbnail: '/images/mollo.jpg',
         ultima_conexion: 'hoy',
         countryPhoneId:'+54 ',
@@ -93,39 +93,7 @@ export const DATA_CONTACTOS = [
     },
     {
         nombre: 'Mollo',
-        id: 4,
-        thumbnail: '/images/mollo.jpg',
-        ultima_conexion: 'hoy',
-        countryPhoneId:'+54 ',
-        phoneNumber: '9 11 4789-3145',
-        mailStorage: 'tomas@gmail.com', 
-        mensajes: [
-            {
-                author: 'Mollo',
-                text: 'Que hacees viejoo, che tengo dos entradas para el show de mañana te venis?',
-                state: 'visto',
-                date: '15:34',
-                id: 33
-            },
-            {
-                author: 'Yo',
-                text: 'QUEE!? en serio? recontra yendooooo!',
-                state: 'visto',
-                date: '15:45',
-                id: 34
-            },
-            {
-                author: 'Mollo',
-                text: 'EEEESA PAPAA!',
-                state: 'entregado',
-                date: '15:34',
-                id: 35
-            },
-        ]
-    },
-    {
-        nombre: 'Mollo',
-        id: 5,
+        id: '4',
         thumbnail: '/images/mollo.jpg',
         ultima_conexion: 'hoy',
         countryPhoneId:'+54 ',
@@ -157,7 +125,39 @@ export const DATA_CONTACTOS = [
     },
     {
         nombre: 'Mollo',
-        id: 6,
+        id: '5',
+        thumbnail: '/images/mollo.jpg',
+        ultima_conexion: 'hoy',
+        countryPhoneId:'+54 ',
+        phoneNumber: '9 11 4789-3145',
+        mailStorage: 'tomas@gmail.com', 
+        mensajes: [
+            {
+                author: 'Mollo',
+                text: 'Que hacees viejoo, che tengo dos entradas para el show de mañana te venis?',
+                state: 'visto',
+                date: '15:34',
+                id: 33
+            },
+            {
+                author: 'Yo',
+                text: 'QUEE!? en serio? recontra yendooooo!',
+                state: 'visto',
+                date: '15:45',
+                id: 34
+            },
+            {
+                author: 'Mollo',
+                text: 'EEEESA PAPAA!',
+                state: 'entregado',
+                date: '15:34',
+                id: 35
+            },
+        ]
+    },
+    {
+        nombre: 'Mollo',
+        id: '6',
         thumbnail: '/images/mollo.jpg',
         ultima_conexion: 'hoy',
         countryPhoneId:'+54 ',

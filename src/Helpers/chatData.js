@@ -22,3 +22,8 @@ export const guardarMensaje= (nuevoMensaje) =>{
     guardarHistorial(listaHistorial)
 
 }
+
+export const contactLastMessage = (messageArray) => {
+    const messageText = messageArray.map(message => message.text)
+    return messageText[messageText.length -1]
+}

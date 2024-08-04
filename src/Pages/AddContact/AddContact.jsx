@@ -41,12 +41,14 @@ const AddContact = () => {
                     </div>
 
                     <div>
-
-                        <label htmlFor="countryId">País</label>
-                        <select name="countryId" id="countryId" onChange={handleContactChangeValue} value={newContact.phoneCountryId}>
-                            {selectCountryNumberOptions.map((option, index) =>{
-                                return <option key={index + option} value={option}>{option}</option>
-                            })}
+                        <label htmlFor="phoneCountryId">País</label>
+                        <select name="phoneCountryId" id="phoneCountryId" onChange={handleContactChangeValue} value={newContact.phoneCountryId}>
+                            {selectCountryNumberOptions.map((option, index) => {
+                                return <option 
+                                key={index + option} 
+                                value={option}>{option}</option>
+                                })
+                            }
 
                         </select>
                         <label htmlFor="phoneNumber">Teléfono</label>

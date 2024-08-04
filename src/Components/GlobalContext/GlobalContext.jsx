@@ -12,8 +12,8 @@ export const GlobalContextProvider = ({ children }) => {
     const [textInput, setTextInput] = useState('')
     const [searchContact, setSearchContact] = useState('')
     const navigate = useNavigate()
-    const getContactDataById = (id) => contactListData.find(contactos => Number(contactos.id) === Number(id))
 
+    const getContactDataById = (id) => contactListData.find(contactos => contactos.id === id)
 
     const updateContact = (contactData) => {
         const updatedContactListData = [
@@ -43,35 +43,16 @@ export const GlobalContextProvider = ({ children }) => {
         }
     }, [searchContact])
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const nuevoMensaje = {
-            author: 'Yo',
-            text: textInput,
-            state: 'entregado',
-            date: '13:52',
-            id: uuid()
-        }
-        const updatedContactData = {
-            ...contactData,
-            mensajes: [
-                ...contactData.mensajes,
-                nuevoMensaje
-            ]
-        }
-        updateContact(updatedContactData)
-        setTextInput('')
-    }
     const handleCreateContact = (e) =>{
         e.preventDefault()
         const newContactForm = e.target
         const newContactFormValues = new FormData(newContactForm)
+        console.log(newContactFormValues)
         const newContact = {
             nombre: '',
             phoneCountryId: '',
             phoneNumber: '',
             mailStorage: '',
-            mensajes: []
         }
         for(let prop in newContact){
             newContact[prop] = newContactFormValues.get(prop)
@@ -79,7 +60,7 @@ export const GlobalContextProvider = ({ children }) => {
         newContact.id = uuid()
         newContact.thumbnail = '/images/newUserWhatsapp.jpg',
         newContact.ultima_conexion = 'ayer'
-        console.log(newContact)
+        newContact.mensajes = []
         setContactListData([...contactListData, newContact])
         guardarMensaje(newContact)
         navigate('/')
@@ -94,7 +75,6 @@ export const GlobalContextProvider = ({ children }) => {
                     updateContact,
                     contactListData,
                     handleChangeContentValue,
-                    handleSubmit,
                     textInput,
                     setTextInput,
                     searchContact,

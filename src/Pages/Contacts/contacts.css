@@ -6,3 +6,7 @@
     gap: 9px;
     overflow: hidden;
 }
+
+.addContactResponsive{
+    display: none;
+}
