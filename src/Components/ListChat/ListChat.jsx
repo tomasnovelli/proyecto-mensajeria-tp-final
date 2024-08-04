@@ -3,7 +3,6 @@ import Message from '../Message/Message'
 import './listChat.css'
 
 const ListChat = ({dataMessage}) => {
-
     return (
         <div className='chatBox'>
             {

@@ -13,7 +13,7 @@ export const GlobalContextProvider = ({ children }) => {
     const [searchContact, setSearchContact] = useState('')
     const navigate = useNavigate()
 
-    const getContactDataById = (id) => contactListData.find(contactos => contactos.id === id)
+    const getContactDataById = (id, lista) => lista.find(contactos => contactos.id === id)
 
     const updateContact = (contactData) => {
         const updatedContactListData = [
@@ -23,9 +23,10 @@ export const GlobalContextProvider = ({ children }) => {
         updatedContactListData[contactIndex] = contactData
         setContactListData(updatedContactListData)
         guardarHistorial(updatedContactListData)
-
     }
 
+
+ 
     const handleChangeContentValue = (e) => {
         setTextInput(e.target.value)
 
@@ -42,6 +43,7 @@ export const GlobalContextProvider = ({ children }) => {
             setContactListData(contactList)
         }
     }, [searchContact])
+
 
     const handleCreateContact = (e) =>{
         e.preventDefault()
@@ -74,6 +76,7 @@ export const GlobalContextProvider = ({ children }) => {
                     getContactDataById,
                     updateContact,
                     contactListData,
+                    setContactListData,
                     handleChangeContentValue,
                     textInput,
                     setTextInput,

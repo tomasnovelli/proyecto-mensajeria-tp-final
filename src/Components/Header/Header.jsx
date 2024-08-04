@@ -1,6 +1,11 @@
 import React from 'react'
 import './header.css'
 import { Link } from 'react-router-dom'
+import { MdOutlinePhone } from "react-icons/md";
+import { HiOutlineVideoCamera } from "react-icons/hi2";
+import ChatDropdownMenu from '../ChatDropdownMenu/ChatDropdownMenu';
+
+
 
 const User = ({ userName, userImg, userConection, userId }) => {
 
@@ -15,7 +20,7 @@ const User = ({ userName, userImg, userConection, userId }) => {
               <img className='userImg' src={'/images/tomasUserImg.jpg'} alt={'yourImg'} />
             </div>
             <div className='interactiveButtons'>
-              <img src="/images/whatsApp.png" alt="whatsApp" width='100px'/>
+              <img src="/images/whatsApp.png" alt="whatsApp" width='100px' />
             </div>
           </div>
           :
@@ -31,14 +36,12 @@ const User = ({ userName, userImg, userConection, userId }) => {
               </Link>
             </div>
             <div className='interactiveButtons'>
-              <i className="bi bi-camera-video-fill"></i>
-              <i className="telephone bi bi-telephone-fill"></i>
-              <i className="burgerMenu bi bi-three-dots-vertical"></i>
+              <HiOutlineVideoCamera className='camera' />
+              <MdOutlinePhone className='telephone' />
+              <ChatDropdownMenu userId={userId} />
             </div>
           </div>
       }
-
-
     </div>
   )
 }
