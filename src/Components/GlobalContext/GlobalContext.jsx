@@ -15,18 +15,18 @@ export const GlobalContextProvider = ({ children }) => {
 
     const getContactDataById = (id, lista) => lista.find(contactos => contactos.id === id)
 
+    const getContactIndex = (id, contactList) => contactList.findIndex(contact => contact.id === id)
+
     const updateContact = (contactData) => {
         const updatedContactListData = [
             ...contactListData
         ]
-        const contactIndex = updatedContactListData.findIndex(contact => contact.id === contactData.id)
+        const contactIndex = getContactIndex(contactData.id, updatedContactListData)
         updatedContactListData[contactIndex] = contactData
         setContactListData(updatedContactListData)
         guardarHistorial(updatedContactListData)
     }
-
-
- 
+    
     const handleChangeContentValue = (e) => {
         setTextInput(e.target.value)
 
@@ -74,6 +74,7 @@ export const GlobalContextProvider = ({ children }) => {
             <GlobalContext.Provider value={
                 {
                     getContactDataById,
+                    getContactIndex,
                     updateContact,
                     contactListData,
                     setContactListData,

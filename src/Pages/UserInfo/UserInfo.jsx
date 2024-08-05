@@ -4,9 +4,9 @@ import { useGlobalContext } from '../../Components/GlobalContext/GlobalContext'
 import { Link, useParams } from 'react-router-dom'
 
 const UserInfo = () => {
-    const { getContactDataById } = useGlobalContext()
+    const { getContactDataById, contactListData } = useGlobalContext()
     const params = useParams()
-    const contactData = getContactDataById(params.contact_id)
+    const contactData = getContactDataById(params.contact_id, contactListData)
 
     const {
         nombre,
@@ -28,10 +28,12 @@ const UserInfo = () => {
                 <h1>{nombre}</h1>
                 <span>{phoneNumber}</span>
                 <div className='btnFunctionContainer'>
-                    <button className='btnFunction'>
-                        <i className="telephoneUser bi bi-telephone"></i>
-                        <span>Llamar</span>
-                    </button>
+                    <Link to={'/chat/' + id + '/calling'}>
+                        <button className='btnFunction'>
+                            <i className="telephoneUser bi bi-telephone"></i>
+                            <span>Llamar</span>
+                        </button>
+                    </Link>
                     <button className='btnFunction'>
                         <i className="ban bi bi-ban"></i>
                         <span>Bloquear</span>
@@ -47,7 +49,7 @@ const UserInfo = () => {
                     <div className="switch-button">
                         <label htmlFor="switch-label" className="switch-button__label"></label>
                         <input type="checkbox" name="switch-button" id="switch-label" className="switch-button__checkbox"></input>
-                        
+
                     </div>
                 </div>
                 <div>

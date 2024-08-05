@@ -9,7 +9,8 @@ const ChatDropdownMenu = ({ userId }) => {
 
     const { 
         contactListData,
-        setContactListData 
+        setContactListData,
+        getContactIndex 
     } = useGlobalContext()
 
     const [dropdown, setDropdown] = useState(false)
@@ -20,7 +21,7 @@ const ChatDropdownMenu = ({ userId }) => {
         const historial = [
             ...contactListData
         ]
-        const contactoBuscado = (historial.findIndex(contacto => contacto.id === userId))
+        const contactoBuscado = getContactIndex(userId, historial)
         historial[contactoBuscado].mensajes = []
         setContactListData(historial)
         guardarHistorial(historial)

@@ -26,7 +26,6 @@ export const guardarMensaje= (nuevoMensaje) =>{
 
 
 export const contactLastMessage = (messageArray) => {
-    console.log(messageArray)
     const messageText = messageArray.map(message => message.text)
     return messageText[messageText.length -1]
 }

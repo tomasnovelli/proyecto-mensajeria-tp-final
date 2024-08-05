@@ -35,7 +35,7 @@ const WrittingText = ({ contactData }) => {
         <div className='textArea'>
           <label htmlFor="text_input"></label>
           <i className="bi bi-emoji-smile smileFace"></i>
-          <input className='textInput' placeholder='Mensaje' type="text" name='text' id='text' onChange={handleChangeContentValue} value={textInput} />
+          <input className='textInput' placeholder='Mensaje' type="text" name='text' id='text' onChange={handleChangeContentValue} value={textInput} autoComplete="off" />
           <i className="bi bi-paperclip"></i>
           <i className="bi bi-camera"></i>
         </div>

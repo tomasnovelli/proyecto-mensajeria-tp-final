@@ -37,7 +37,7 @@ const AddContact = () => {
                 <form onSubmit={handleCreateContact}>
                     <div>
                         <label htmlFor="Nombre"><i className="bi bi-person-fill"></i></label>
-                        <input type="text" placeholder='nombre' name='nombre' id='Nombre' onChange={handleContactChangeValue} value={newContact.nombre} />
+                        <input type="text" placeholder='nombre' name='nombre' id='Nombre' onChange={handleContactChangeValue} value={newContact.nombre} autoComplete="off" />
                     </div>
 
                     <div>
@@ -49,16 +49,16 @@ const AddContact = () => {
                                 value={option}>{option}</option>
                                 })
                             }
-
                         </select>
+
                         <label htmlFor="phoneNumber">Teléfono</label>
-                        <input type="text" placeholder='Teléfono' name="phoneNumber" id="phoneNumber" onChange={handleContactChangeValue} value={newContact.phoneNumber}/>
+                        <input type="text" placeholder='Teléfono' name="phoneNumber" id="phoneNumber" onChange={handleContactChangeValue} value={newContact.phoneNumber} autoComplete="off" />
 
                     </div>
                     <label htmlFor="mailStorage">Guardar en</label>
                     <div>
                         <i className="bi bi-download"></i>
-                        <input type="text" placeholder='nombre@gmail.com' name='mailStorage' id='mailStorage' onChange={handleContactChangeValue}value={newContact.mailStorage} />
+                        <input type="text" placeholder='nombre@gmail.com' name='mailStorage' id='mailStorage' onChange={handleContactChangeValue}value={newContact.mailStorage} autoComplete="off" />
                     </div>
                     <button type='submit'>Guardar</button>
                 </form>
