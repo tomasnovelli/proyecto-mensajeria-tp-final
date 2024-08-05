@@ -16,6 +16,9 @@ export const obtenerHistorial = () =>{
     }
 }
 
+export const clearLocalStorage = () => localStorage.clear('historial')
+
+
 
 export const guardarMensaje= (nuevoMensaje) =>{
     const listaHistorial = obtenerHistorial()
