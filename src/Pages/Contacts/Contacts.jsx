@@ -6,7 +6,6 @@ import ContactListFooter from '../../Components/ContactListFooter/ContactListFoo
 import { Link } from 'react-router-dom'
 import { Header } from '../../Components'
 import AddContact from '../AddContact/AddContact'
-import { clearLocalStorage } from '../../Helpers/chatData'
 
 
 const Contacts = () => {
@@ -28,10 +27,6 @@ const Contacts = () => {
                     <i className="bi bi-person-plus-fill"></i>
                 </button>
             </Link>
-            <div>
-            <button onClick={clearLocalStorage}>Clear LocalStorage</button>
-            </div>
-            
             <ContactList dataMock={contactListData} />
             <ContactListFooter />
 

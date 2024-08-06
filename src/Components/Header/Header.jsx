@@ -4,23 +4,35 @@ import { Link } from 'react-router-dom'
 import { MdOutlinePhone } from "react-icons/md";
 import { HiOutlineVideoCamera } from "react-icons/hi2";
 import ChatDropdownMenu from '../ChatDropdownMenu/ChatDropdownMenu';
+import { FaCaretDown } from "react-icons/fa";
+import { useGlobalContext } from '../GlobalContext/GlobalContext';
 
 
 
 const User = ({ userName, userImg, userConection, userId }) => {
+  const {
+    dropdown,
+    setDropdown,
+    handleOpenCloseDropDownMenu,
+    clearLocalStorage
+  } = useGlobalContext()
 
   return (
-
     <div>
       {
         userName === undefined
           ?
           <div className='userInfo'>
-            <div className='imgContainer'>
+            <div className='imgContainer user'>
               <img className='userImg' src={'/images/tomasUserImg.jpg'} alt={'yourImg'} />
             </div>
             <div className='interactiveButtons'>
-              <img src="/images/whatsApp.png" alt="whatsApp" width='100px' />
+              {
+                dropdown &&
+                <button onClick={clearLocalStorage}>Clear LocalStorage</button>
+              }
+              <button className='btn-whatsapp' onClick={handleOpenCloseDropDownMenu}><img className='whatsappIcon' src="/images/whatsApp.png" alt="whatsApp" width='100px' /></button>
+              <FaCaretDown className='whatsappCaret' />
             </div>
           </div>
           :

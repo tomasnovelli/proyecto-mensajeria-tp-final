@@ -10,13 +10,16 @@ const ChatDropdownMenu = ({ userId }) => {
     const { 
         contactListData,
         setContactListData,
-        getContactIndex 
+        getContactIndex,
+        dropdown,
+        setDropdown,
+        handleOpenCloseDropDownMenu 
     } = useGlobalContext()
 
-    const [dropdown, setDropdown] = useState(false)
+/*     const [dropdown, setDropdown] = useState(false)
     const handleOpenCloseDropDownMenu = () => {
         setDropdown(!dropdown)
-    }
+    } */
     const borrarMensajesDeContacto = (e) => {
         const historial = [
             ...contactListData

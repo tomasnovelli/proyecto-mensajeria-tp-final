@@ -11,6 +11,8 @@ export const GlobalContextProvider = ({ children }) => {
     const [contactListData, setContactListData] = useState(obtenerHistorial())
     const [textInput, setTextInput] = useState('')
     const [searchContact, setSearchContact] = useState('')
+    const [dropdown, setDropdown] = useState(false)
+
     const navigate = useNavigate()
 
     const getContactDataById = (id, lista) => lista.find(contactos => contactos.id === id)
@@ -67,7 +69,15 @@ export const GlobalContextProvider = ({ children }) => {
         guardarMensaje(newContact)
         navigate('/')
     }
-    
+
+    const handleOpenCloseDropDownMenu = () => {
+        setDropdown(!dropdown)
+    }
+    const clearLocalStorage = () => {
+        localStorage.clear('historial')
+        setDropdown(!dropdown)
+
+    }
 
     return (
         <div>
@@ -83,7 +93,11 @@ export const GlobalContextProvider = ({ children }) => {
                     setTextInput,
                     searchContact,
                     handleChangeContent,
-                    handleCreateContact
+                    handleCreateContact,
+                    dropdown,
+                    setDropdown,
+                    handleOpenCloseDropDownMenu,
+                    clearLocalStorage
 
                 }
             }>

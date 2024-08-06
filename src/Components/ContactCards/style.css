@@ -6,8 +6,8 @@
     overflow: hidden;
 }
 .containerImg {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -20,8 +20,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     text-decoration: none;
     padding: 5px;
 
@@ -38,11 +36,19 @@
 
 .bottomContactCardInfo{
     width: 100%;
-    display: flex;
     font-size: 12px;
     font-weight: 300;
 }
-
+.overflow-ellipsis{
+    text-overflow: ellipsis;
+}
+.lastMessage{
+    display: flex;
+    width: 80%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .msjNumber{
     display: flex;
     justify-content: center;
