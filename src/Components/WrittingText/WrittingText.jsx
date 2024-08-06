@@ -39,8 +39,13 @@ const WrittingText = ({ contactData }) => {
           <i className="bi bi-paperclip"></i>
           <i className="bi bi-camera"></i>
         </div>
+        {
+          !textInput || textInput === ' '
+          ?<button className='disabled btn-submit ' type="submit" disabled><i className="bi bi-send-fill"></i></button>
+          :
+          <button className='btn-submit' type="submit"><i className="bi bi-send-fill"></i></button>
+        }
 
-        <button className='btn-submit' type="submit"><i className="bi bi-send-fill"></i></button>
       </form>
     </div>
 

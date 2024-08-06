@@ -42,6 +42,9 @@
     color: white;
     margin-left: 3px;
 }
+.disabled{
+    background-color: grey;
+}
 .smileFace, .bi-paperclip, .bi-camera{
     color: rgb(58, 58, 58);
     font-size: 18px;

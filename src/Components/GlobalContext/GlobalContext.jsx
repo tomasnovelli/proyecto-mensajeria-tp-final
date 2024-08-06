@@ -25,7 +25,7 @@ export const GlobalContextProvider = ({ children }) => {
         ]
         const contactIndex = getContactIndex(contactData.id, updatedContactListData)
         updatedContactListData[contactIndex] = contactData
-        setContactListData(updatedContactListData)
+        setContactListData(prevContactListData => updatedContactListData)
         guardarHistorial(updatedContactListData)
     }
     
@@ -37,12 +37,12 @@ export const GlobalContextProvider = ({ children }) => {
         setSearchContact(e.target.value)
     }
     useEffect(() => {
-        const contactList = obtenerHistorial()
+        const contactListToSearch = obtenerHistorial()
         if (searchContact != '') {
-            const newContactList = contactList.filter(contact => contact.nombre.toLowerCase().includes(searchContact.toLowerCase()))
+            const newContactList = contactListToSearch.filter(contact => contact.nombre.toLowerCase().includes(searchContact.toLowerCase()))
             setContactListData(newContactList)
         } else {
-            setContactListData(contactList)
+            setContactListData(contactListToSearch)
         }
     }, [searchContact])
 
