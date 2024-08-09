@@ -10,7 +10,7 @@ const Chat = () => {
 
   const { getContactDataById, contactListData} = useGlobalContext()
   const params = useParams()
-  const contactData = getContactDataById(params.contact_id, contactListData)
+  const contactData = getContactDataById(params.contact_id)
 
   return (
     <div className='body'>

@@ -15,10 +15,6 @@ export const obtenerHistorial = () =>{
     }
 }
 
-/* const clearLocalStorage = () => localStorage.clear('historial') */
-
-
-
 export const guardarMensaje= (nuevoMensaje) =>{
     const listaHistorial = obtenerHistorial()
     listaHistorial.push(nuevoMensaje)
@@ -26,8 +22,7 @@ export const guardarMensaje= (nuevoMensaje) =>{
 
 }
 
-
 export const contactLastMessage = (messageArray) => {
     const messageText = messageArray.map(message => message.text)
-    return messageText[messageText.length -1]
+    return messageText[messageText.length - 1]
 }

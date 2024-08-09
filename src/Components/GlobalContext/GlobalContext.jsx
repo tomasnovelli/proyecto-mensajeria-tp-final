@@ -15,20 +15,18 @@ export const GlobalContextProvider = ({ children }) => {
 
     const navigate = useNavigate()
 
-    const getContactDataById = (id, lista) => lista.find(contactos => contactos.id === id)
+    const getContactDataById = (id) => obtenerHistorial().find(contactos => contactos.id === id)
 
     const getContactIndex = (id, contactList) => contactList.findIndex(contact => contact.id === id)
 
     const updateContact = (contactData) => {
-        const updatedContactListData = [
-            ...contactListData
-        ]
+        const updatedContactListData = obtenerHistorial()
         const contactIndex = getContactIndex(contactData.id, updatedContactListData)
         updatedContactListData[contactIndex] = contactData
         setContactListData(prevContactListData => updatedContactListData)
         guardarHistorial(updatedContactListData)
     }
-    
+    console.log(contactListData)
     const handleChangeContentValue = (e) => {
         setTextInput(e.target.value)
 
@@ -36,14 +34,11 @@ export const GlobalContextProvider = ({ children }) => {
     const handleChangeContent = (e) =>{
         setSearchContact(e.target.value)
     }
+    
     useEffect(() => {
         const contactListToSearch = obtenerHistorial()
-        if (searchContact != '') {
             const newContactList = contactListToSearch.filter(contact => contact.nombre.toLowerCase().includes(searchContact.toLowerCase()))
             setContactListData(newContactList)
-        } else {
-            setContactListData(contactListToSearch)
-        }
     }, [searchContact])
 
 

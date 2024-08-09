@@ -1,3 +1,19 @@
 .contactListfooter{
-    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px 0px 20px;
+    border-top: 1px solid var(--textArea-color);
+}
+
+.btn-contactFooter{
+    width: 66px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+}
+
+.btn-footerText{
+    font-size: 13px;
 }

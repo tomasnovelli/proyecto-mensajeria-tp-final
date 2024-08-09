@@ -16,6 +16,7 @@ const WrittingText = ({ contactData }) => {
       date: '13:52',
       id: uuid()
     }
+    console.log(contactData)
     const updatedContactData = {
         ...contactData, 
         mensajes: [

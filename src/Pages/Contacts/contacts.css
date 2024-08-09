@@ -3,9 +3,39 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    gap: 1px;
 }
 
 .addContactResponsive{
     display: none;
+}
+
+.contactSearch{
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+}
+
+.contactSearchInput{
+    width: 95%;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    padding-left: 10px;
+    background-color: var(--textArea-color);
+    font-weight: 500;
+}
+
+.btn-addContact{
+    background-color: var(--app-color);
+    font-size: 20px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 2px 3px rgba(99, 99, 99, 0.616);
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
 }

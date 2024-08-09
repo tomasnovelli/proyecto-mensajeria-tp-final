@@ -18,12 +18,12 @@ const Contacts = () => {
             <AddContact />
             </div>
             <Header />
-            <div>
-                <label htmlFor="contactSearh"></label>
-                <input type="text" placeholder='Buscar contacto' name='contactSearch' id='contactSearch' onChange={handleChangeContent} value={searchContact} />
+            <div className='contactSearch'>
+                <label htmlFor="contactSearch"></label>
+                <input className='contactSearchInput' type="text" placeholder='Buscar contacto' name='contactSearch' id='contactSearch' onChange={handleChangeContent} value={searchContact} />
             </div>
             <Link to={'/addContact'}>
-                <button>
+                <button className='btn-addContact'>
                     <i className="bi bi-person-plus-fill"></i>
                 </button>
             </Link>

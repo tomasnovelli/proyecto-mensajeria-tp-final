@@ -11,12 +11,12 @@ const ContactCards = ({ contactData }) => {
         id,
         mensajes
     } = contactData
-
-     const lastMessage = contactLastMessage(mensajes)
+    const lastMessage = contactLastMessage(mensajes)
+    
     return (
-        <div className='contactos'>
+        <div className='contactsCardsContainer'>
             <div className='containerImg'>
-                <img className={'img_' + nombre.toLowerCase()} src={thumbnail} alt="" />
+                <img src={thumbnail} alt={'img_' + nombre.toLowerCase()} />
             </div>
             <Link className='contactCard' to={'/chat/' + id}>
                 <div className='topContactCardInfo'>

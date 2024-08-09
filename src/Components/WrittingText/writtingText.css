@@ -1,17 +1,26 @@
 .writtingText{
+    width: 100%;
+    /* display: flex; */
+    position: absolute;
+    bottom: 7px;
     background-color: transparent;
-    padding: 1px;
+    /* height: 500px; */
+    /* padding: 0px 0px 213px 31px; */
+    /* margin: 0px 0px 15px 0px; */
 }
 .form{
+    /* width: 80%; */
     display: flex;
+    /* justify-content: space-between; */
     align-items: center;
-    
     gap: 4px;
+    /* padding-bottom: 157px; */
+    /* position: relative; */
+    /* bottom: 17px; */
 }
 .textArea{
     display: flex;
     align-items: center;
-    justify-content: space-around;
     background-color: var(--textArea-color);
     width: 85%;
     border-radius: 20px;

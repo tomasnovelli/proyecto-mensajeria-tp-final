@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './ChatDropdownMenu.css'
 import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../GlobalContext/GlobalContext'
-import { guardarHistorial } from '../../Helpers/chatData'
+import { guardarHistorial, obtenerHistorial } from '../../Helpers/chatData'
 
 
 const ChatDropdownMenu = ({ userId }) => {
@@ -20,10 +20,8 @@ const ChatDropdownMenu = ({ userId }) => {
     const handleOpenCloseDropDownMenu = () => {
         setDropdown(!dropdown)
     } */
-    const borrarMensajesDeContacto = (e) => {
-        const historial = [
-            ...contactListData
-        ]
+    const borrarMensajesDeContacto = () => {
+        const historial = obtenerHistorial()
         const contactoBuscado = getContactIndex(userId, historial)
         historial[contactoBuscado].mensajes = []
         setContactListData(historial)
