@@ -64,9 +64,8 @@ export const GlobalContextProvider = ({ children }) => {
         navigate('/')
     }
 
-    const handleOpenCloseDropDownMenu = () => {
-        setDropdown(!dropdown)
-    }
+    const handleOpenCloseDropDownMenu = () => setDropdown(!dropdown)
+    
     const clearLocalStorage = () => {
         localStorage.clear('historial')
         setDropdown(!dropdown)
@@ -90,7 +89,7 @@ export const GlobalContextProvider = ({ children }) => {
                     dropdown,
                     setDropdown,
                     handleOpenCloseDropDownMenu,
-                    clearLocalStorage
+                    clearLocalStorage,
 
                 }
             }>

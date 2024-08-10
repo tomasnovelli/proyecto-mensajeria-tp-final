@@ -1,0 +1,14 @@
+.switchIcon{
+   font-size: 45px;
+}
+
+.bi-toggle-on{
+    transition: .5s;
+    color: var(--app-color);
+
+
+}
+.bi-toggle-off{
+    transition: .2s;
+    color: rgba(49, 48, 48, 0.788);
+}

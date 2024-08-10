@@ -1,4 +1,4 @@
-.userInfo{
+.userInfoChat{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,8 +18,12 @@
     width: 115px;
 }
 .btn-whatsapp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
     border: none;
+    margin-right: 9px;
 }
 .user{
     margin-left: 18px;
@@ -58,9 +62,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-}
-.whatsappCaret{
-    margin-right: 8px;
 }
 
 .camera, .telephone{

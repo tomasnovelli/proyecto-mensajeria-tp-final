@@ -22,7 +22,7 @@ const User = ({ userName, userImg, userConection, userId }) => {
       {
         userName === undefined
           ?
-          <div className='userInfo'>
+          <div className='userInfoChat'>
             <div className='imgContainer user'>
               <img className='userImg' src={'/images/tomasUserImg.jpg'} alt={'yourImg'} />
             </div>
@@ -31,12 +31,15 @@ const User = ({ userName, userImg, userConection, userId }) => {
                 dropdown &&
                 <button onClick={clearLocalStorage}>Clear LocalStorage</button>
               }
-              <button className='btn-whatsapp' onClick={handleOpenCloseDropDownMenu}><img className='whatsappIcon' src="/images/whatsApp.png" alt="whatsApp" width='100px' /></button>
-              <FaCaretDown className='whatsappCaret' />
+              <button className='btn-whatsapp' onClick= {handleOpenCloseDropDownMenu}>
+                <img className='whatsappIcon' src="/images/whatsApp.png" alt="whatsApp" width='100px' />
+                <FaCaretDown className='whatsappCaret' />
+              </button>
+              
             </div>
           </div>
           :
-          <div className='userInfo'>
+          <div className='userInfoChat'>
             <div className='userData'>
               <Link to='/'><i className="backArrow bi bi-arrow-left-short"></i></Link>
               <div className='imgContainer'>

@@ -1,0 +1,20 @@
+.addToFavorite{
+    width: 100vw;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.btn-addToFavorite{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 8px;
+}
+
+.addToFavoriteText{
+    font-size: 17px;
+}

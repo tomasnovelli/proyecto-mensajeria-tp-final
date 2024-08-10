@@ -6,7 +6,8 @@ export const DATA_CONTACTOS = [
         id: '1',
         countryPhoneId:'+54 ', 
         phoneNumber: '9 11 4084-8975',
-        mailStorage: 'tomas@gmail.com', 
+        mailStorage: 'tomas@gmail.com',
+        userStateText: 'Orgulloso de ser argentino', 
         mensajes: [
             {
                 author: 'Messi',
@@ -36,7 +37,8 @@ export const DATA_CONTACTOS = [
         ultima_conexion: 'ayer',
         countryPhoneId:'+54 ',
         phoneNumber: '9 11 6498-7894',
-        mailStorage: 'tomas@gmail.com', 
+        mailStorage: 'tomas@gmail.com',
+        userStateText: 'Enamorada de mis 3 soles', 
         mensajes: [
             {
                 author: 'Abuelita',
@@ -67,6 +69,8 @@ export const DATA_CONTACTOS = [
         ultima_conexion: 'hoy',
         countryPhoneId:'+54 ',
         phoneNumber: '9 11 4789-3145',
+        mailStorage: 'tomas@gmail.com',
+        userStateText: 'las penas son de nosotros, las vaquitas son ajenas',
         mensajes: [
             {
                 author: 'Mollo',
@@ -98,7 +102,8 @@ export const DATA_CONTACTOS = [
         ultima_conexion: '4/08/2024',
         countryPhoneId:'+54 ',
         phoneNumber: '9 11 4789-3145',
-        mailStorage: 'tomas@gmail.com', 
+        mailStorage: 'tomas@gmail.com',
+        userStateText: 'Grabando nuevo disco', 
         mensajes: [
             {
                 author: 'Nicky',
@@ -128,7 +133,8 @@ export const DATA_CONTACTOS = [
         ultima_conexion: 'ayer',
         countryPhoneId:'+54 ',
         phoneNumber: '9 11 4789-3145',
-        mailStorage: 'tomas@gmail.com', 
+        mailStorage: 'tomas@gmail.com',
+        userStateText: 'El amoor despues del amor existe', 
         mensajes: [
             {
                 author: 'Fito',
@@ -158,7 +164,8 @@ export const DATA_CONTACTOS = [
         ultima_conexion: 'hoy',
         countryPhoneId:'+54 ',
         phoneNumber: '9 11 4789-3145',
-        mailStorage: 'tomas@gmail.com', 
+        mailStorage: 'tomas@gmail.com',
+        userStateText: 'No me hables, no me importas', 
         mensajes: [
             {
                 author: 'Charly',
