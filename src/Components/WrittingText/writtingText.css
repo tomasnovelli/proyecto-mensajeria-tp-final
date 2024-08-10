@@ -1,7 +1,7 @@
 .writtingText{
     width: 100%;
     background-color: transparent;
-    padding: 5px;
+    padding: 2px 5px 5px 5px;
 }
 .form{
     display: flex;

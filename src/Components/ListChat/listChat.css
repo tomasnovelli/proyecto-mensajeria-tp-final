@@ -4,6 +4,7 @@
     overflow: hidden;
     overflow-y: scroll;
     height: 100vh;
+    margin-top: 2px;
 }
 
 
