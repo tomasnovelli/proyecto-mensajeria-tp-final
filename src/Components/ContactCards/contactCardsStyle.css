@@ -21,17 +21,18 @@
     flex-direction: column;
     text-decoration: none;
     padding: 5px;
-
+    color: var(--fontColor);
 }
 .topContactCardInfo{
     width: 100%;
     display: flex;
     justify-content: space-between;
     font-size: 19px;
-
+    font-weight: 500;
 }
 .lastConection{
     font-size: 13px;
+    font-weight: 300;
 }
 
 .bottomContactCardInfo{

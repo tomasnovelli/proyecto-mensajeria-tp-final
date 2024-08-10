@@ -39,11 +39,13 @@
 .userConection{
     font-size: 13px;
     color: var(--fontColor);
+    font-weight: 300;
 }
 .userData{
     display: flex;
     align-items: center;
     gap: 5px;
+
 }
 .backArrow{
     font-size: 25px;

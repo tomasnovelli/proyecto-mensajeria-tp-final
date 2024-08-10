@@ -26,7 +26,6 @@ export const GlobalContextProvider = ({ children }) => {
         setContactListData(prevContactListData => updatedContactListData)
         guardarHistorial(updatedContactListData)
     }
-    console.log(contactListData)
     const handleChangeContentValue = (e) => {
         setTextInput(e.target.value)
 
@@ -71,7 +70,6 @@ export const GlobalContextProvider = ({ children }) => {
     const clearLocalStorage = () => {
         localStorage.clear('historial')
         setDropdown(!dropdown)
-
     }
 
     return (
