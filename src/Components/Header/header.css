@@ -6,8 +6,8 @@
     background-color: rgb(11, 196, 73);
 }
 .imgContainer{
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -26,7 +26,7 @@
 }
 .userName{
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     color: var(--fontColor);
     margin-left: 8px;
 }
@@ -37,26 +37,30 @@
     align-items: baseline;
 }
 .userConection{
-    font-size: 12px;
+    font-size: 13px;
+    color: var(--fontColor);
 }
 .userData{
     display: flex;
     align-items: center;
+    gap: 5px;
 }
 .backArrow{
     font-size: 25px;
     text-decoration: none;
+    color: var(--fontColor);
 
 }
 
 .interactiveButtons{
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 .whatsappCaret{
     margin-right: 8px;
 }
 
 .camera, .telephone{
-    font-size: 17px;
+    font-size: 25px;
 }

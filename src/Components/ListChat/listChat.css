@@ -1,14 +1,16 @@
 .chatBox{
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     overflow-y: scroll;
+    height: 100vh;
 }
 
+
 .chatBox::-webkit-scrollbar{
-    width: 7px;
-    scroll-behavior: auto smooth;
+    width: 4px;
 }
-.chatBox::-webkit-scrollbar-thumb{
-    background-color: rgba(107, 102, 102, 0.301);
-    border-radius: 8px;
-}
+  .chatBox::-webkit-scrollbar-thumb {
+    background-color: var(--app-color);    /* color of the scroll thumb */
+    border-radius: 20px;       
+  }

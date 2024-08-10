@@ -11,10 +11,6 @@ const ContactListFooter = () => {
         <span className='btn-footerText'>Chats</span>
       </div>
       <div className='btn-contactFooter'>
-        <MdOutlinePhone />
-        <span className='btn-footerText'>Llamadas</span>
-      </div>
-      <div className='btn-contactFooter'>
         <FaUsers />
         <span className='btn-footerText'>Comunidades</span>
       </div>

@@ -38,8 +38,8 @@ const ChatDropdownMenu = ({ userId }) => {
                     <button onClick={borrarMensajesDeContacto}>Vaciar Chat</button>
                 </div>
             }
-            <button onClick={handleOpenCloseDropDownMenu}>
-                <i className="burgerMenu bi bi-three-dots-vertical"></i>
+            <button className='burgerMenu' onClick={handleOpenCloseDropDownMenu}>
+                <i className="bi bi-three-dots-vertical"></i>
             </button>
         </div>
     )

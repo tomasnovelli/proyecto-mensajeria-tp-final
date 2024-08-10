@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './style.css'
+import './contactCardsStyle.css'
 import { contactLastMessage } from '../../Helpers/chatData'
 const ContactCards = ({ contactData }) => {
 

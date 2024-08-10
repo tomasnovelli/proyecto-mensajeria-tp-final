@@ -1,55 +1,67 @@
 .writtingText{
     width: 100%;
-    /* display: flex; */
-    position: absolute;
-    bottom: 7px;
     background-color: transparent;
-    /* height: 500px; */
-    /* padding: 0px 0px 213px 31px; */
-    /* margin: 0px 0px 15px 0px; */
+    padding: 5px;
 }
 .form{
-    /* width: 80%; */
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     gap: 4px;
-    /* padding-bottom: 157px; */
-    /* position: relative; */
-    /* bottom: 17px; */
+    margin: 0px 5px 0px 5px;
 }
 .textArea{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex: 1;
     background-color: var(--textArea-color);
-    width: 85%;
+    width: 100%;
     border-radius: 20px;
     padding-left: 2px;
-    margin-left: 2px;
+    padding: 0px 10px 0px 10px;
 }
+.textArea .textAreaChild:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex: 7;
+}
+.textArea .textAreaChild:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+ }
+
 .textInput{
+    width: 100%;
     color: rgb(65, 65, 65);
     font-weight: 500;
     /* text-shadow: 0px 0px 0.5px rgb(0, 0, 0); */
     background-color: transparent;
     border: none;
-    height: 30px;
+    height: 40px;
     padding-left: 2px;
 }
 .textInput::placeholder{
     color: rgb(58, 58, 58);
 }
 .textInput:focus{
-    border-color: red;
+    outline: none;
 }
+
+
 .btn-submit{
     background-color: var(--app-color);
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: none;
     color: white;
     margin-left: 3px;
+    font-size: 17px;
 }
 .disabled{
     background-color: grey;

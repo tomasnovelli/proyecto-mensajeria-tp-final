@@ -13,7 +13,7 @@ const Chat = () => {
   const contactData = getContactDataById(params.contact_id)
 
   return (
-    <div className='body'>
+    <div className='chat'>
 
       <Header userName={contactData.nombre} userImg={contactData.thumbnail} userId={contactData.id} userConection={contactData.ultima_conexion} />
       <ListChat dataMessage={contactData.mensajes} />

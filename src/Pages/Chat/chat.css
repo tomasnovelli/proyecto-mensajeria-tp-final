@@ -1,7 +1,7 @@
-
-.body{
-    width: 100vw;
+.chat{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-image: url("https://i.pinimg.com/736x/3a/2e/99/3a2e99d16f179dae33e2c394be2229fb.jpg");
 }
 

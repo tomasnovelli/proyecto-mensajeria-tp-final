@@ -1,4 +1,13 @@
 .contactList{
+    height: 100vh;
     overflow: hidden;
     overflow-y: scroll;
 }
+
+.contactList::-webkit-scrollbar{
+    width: 4px;
+}
+  .contactList::-webkit-scrollbar-thumb {
+    background-color: var(--app-color);    /* color of the scroll thumb */
+    border-radius: 20px;       
+  }
