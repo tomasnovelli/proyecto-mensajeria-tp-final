@@ -27,7 +27,7 @@ const UserInfo = () => {
         thumbnail,
         id,
         phoneNumber,
-        countryPhoneId,
+        phoneCountryId,
         userStateText
     } = contactData
 
@@ -40,7 +40,7 @@ const UserInfo = () => {
                         <img src={thumbnail} alt="" />
                     </div>
                     <h1>{nombre}</h1>
-                    <span>{countryPhoneId + phoneNumber}</span>
+                    <span>{phoneCountryId + phoneNumber}</span>
                     <div className='btnFunctionContainer'>
                         <Link to={'/chat/' + id + '/calling'}>
                             <button className='btnFunction'>

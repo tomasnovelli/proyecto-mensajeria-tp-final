@@ -45,7 +45,7 @@ export const GlobalContextProvider = ({ children }) => {
         e.preventDefault()
         const newContactForm = e.target
         const newContactFormValues = new FormData(newContactForm)
-        console.log(newContactFormValues)
+
         const newContact = {
             nombre: '',
             phoneCountryId: '',
@@ -55,6 +55,7 @@ export const GlobalContextProvider = ({ children }) => {
         for(let prop in newContact){
             newContact[prop] = newContactFormValues.get(prop)
         }
+        console.log(newContact)
         newContact.id = uuid()
         newContact.thumbnail = '/images/newUserWhatsapp.jpg',
         newContact.ultima_conexion = 'ayer'
