@@ -8,6 +8,9 @@
 }
 
 .btn-contactFooter{
+
+    background-color: transparent;
+    border: none;
     width: 66px;
     display: flex;
     flex-direction: column;

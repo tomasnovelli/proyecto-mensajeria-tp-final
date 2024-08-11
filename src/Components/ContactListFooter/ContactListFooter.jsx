@@ -1,20 +1,36 @@
 import React from 'react'
 import './contactListFooterStyles.css'
-import { MdOutlinePhone } from "react-icons/md";
-import { FaUsers } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
+import { useGlobalContext } from '../GlobalContext/GlobalContext';
 
 const ContactListFooter = () => {
+  const { setNavigationState } = useGlobalContext()
+  const sitesNavigation = [
+    {
+      icon: "bi bi-chat-left-text-fill",
+      site: 'contacts'
+
+    },
+    {
+      icon: "bi bi-people-fill",
+      site: 'comunity'
+    }
+  ]
+  
+  const handleChangeSite = (site) => {
+    setNavigationState(site)
+  }
+
   return (
     <div className='contactListfooter'>
-      <div className='btn-contactFooter'>
-        <i className="bi bi-chat-left-text-fill"></i>
-        <span className='btn-footerText'>Chats</span>
-      </div>
-      <div className='btn-contactFooter'>
-        <Link to='/comunidades'><FaUsers /></Link>
-        <span className='btn-footerText'>Comunidades</span>
-      </div>
+      {sitesNavigation.map(categoria => {
+          return(
+            <button key={categoria.site} className='btn-contactFooter' onClick={() => handleChangeSite(categoria.site)}>
+                <i className={categoria.icon}></i>
+                <span className='btn-footerText'>{categoria.site}</span>
+            </button>
+          )
+        })
+      }
     </div>
   )
 }

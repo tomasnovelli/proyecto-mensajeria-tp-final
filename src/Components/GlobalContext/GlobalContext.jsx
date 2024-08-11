@@ -12,11 +12,10 @@ export const GlobalContextProvider = ({ children }) => {
     const [textInput, setTextInput] = useState('')
     const [searchContact, setSearchContact] = useState('')
     const [dropdown, setDropdown] = useState(false)
+    const [navigationState, setNavigationState] = useState('contacts')
 
     const navigate = useNavigate()
-
     const getContactDataById = (id) => obtenerHistorial().find(contactos => contactos.id === id)
-
     const getContactIndex = (id, contactList) => contactList.findIndex(contact => contact.id === id)
 
     const updateContact = (contactData) => {
@@ -41,8 +40,7 @@ export const GlobalContextProvider = ({ children }) => {
             const newContactList = contactListToSearch.filter(contact => contact.nombre.toLowerCase().includes(searchContact.toLowerCase()))
             setContactListData(newContactList)
     }, [searchContact])
-
-
+    
     const handleCreateContact = (e) =>{
         e.preventDefault()
         const newContactForm = e.target
@@ -93,8 +91,9 @@ export const GlobalContextProvider = ({ children }) => {
                     setDropdown,
                     handleOpenCloseDropDownMenu,
                     clearLocalStorage,
-                    handleCleanSearchInput
-
+                    handleCleanSearchInput,
+                    navigationState, 
+                    setNavigationState
                 }
             }>
                 {children}
