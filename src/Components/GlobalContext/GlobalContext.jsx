@@ -28,10 +28,12 @@ export const GlobalContextProvider = ({ children }) => {
     }
     const handleChangeContentValue = (e) => {
         setTextInput(e.target.value)
-
     }
     const handleChangeContent = (e) =>{
         setSearchContact(e.target.value)
+    }
+    const handleCleanSearchInput = (e) =>{
+        setSearchContact('')
     }
     
     useEffect(() => {
@@ -91,6 +93,7 @@ export const GlobalContextProvider = ({ children }) => {
                     setDropdown,
                     handleOpenCloseDropDownMenu,
                     clearLocalStorage,
+                    handleCleanSearchInput
 
                 }
             }>

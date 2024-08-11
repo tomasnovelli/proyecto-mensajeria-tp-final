@@ -6,6 +6,8 @@ import Header from "./Header/Header";
 import WrittingText from "./WrittingText/WrittingText";
 import SwitchButton from "./SwitchButton/SwitchButton";
 import FavoriteButton from "./FavoriteButton/FavoriteButton";
+import AddContactForm from "./AddContactForm/AddContactForm";
+
 
 export{
     ContactCards,
@@ -15,7 +17,8 @@ export{
     Header,
     WrittingText,
     SwitchButton,
-    FavoriteButton
+    FavoriteButton,
+    AddContactForm
 }
 
 

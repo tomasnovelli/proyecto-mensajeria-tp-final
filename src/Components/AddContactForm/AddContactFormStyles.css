@@ -1,0 +1,86 @@
+.addContactForm{
+    display: flex;
+
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.addContactInputsContainer{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    padding: 18px;
+    margin-top: 10px;
+    gap: 40px;
+}
+.addContactForm label{
+    font-size: 18px;
+    font-weight: 500;
+}
+.addContactForm input{
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.inputsBorder{
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+.inputsBorder:focus{
+    outline: none;
+}
+
+.newUserNameContainer{
+    display: flex;
+    gap: 7px;
+}
+
+.newUserMailContainer{
+    display: flex;
+    gap: 15px;
+}
+.newUserPhoneNumberContainer{
+    display: flex;
+    gap: 8px;
+    align-items: end;
+}
+.phoneNumberIconContainer{
+    display: flex;
+    justify-content: center;
+}
+.countrySelectContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-left: 4px;
+}
+.newUserMailStorageContainer{
+    display: flex;
+    align-items: end;
+    gap: 13px;
+}
+
+.mailStorageInputContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.mailStorageIcon{
+    display: flex;
+}
+.formIconsSize{
+    font-size: 21px ;
+}
+.btn-addContactContainer{
+    width: 90%;
+}
+.btn-addContactSubmit{
+    width: 100%;
+    height: 30px;
+    color: white;
+    border: none;
+    background-color: var(--app-color);
+    border-radius: 20px;
+}

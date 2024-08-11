@@ -39,7 +39,7 @@ const UserInfo = () => {
                     <div className='imgUser'>
                         <img src={thumbnail} alt="" />
                     </div>
-                    <h1>{nombre}</h1>
+                    <h2>{nombre}</h2>
                     <span>{phoneCountryId + phoneNumber}</span>
                     <div className='btnFunctionContainer'>
                         <Link to={'/chat/' + id + '/calling'}>

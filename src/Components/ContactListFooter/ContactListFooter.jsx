@@ -2,6 +2,7 @@ import React from 'react'
 import './contactListFooterStyles.css'
 import { MdOutlinePhone } from "react-icons/md";
 import { FaUsers } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 const ContactListFooter = () => {
   return (
@@ -11,7 +12,7 @@ const ContactListFooter = () => {
         <span className='btn-footerText'>Chats</span>
       </div>
       <div className='btn-contactFooter'>
-        <FaUsers />
+        <Link to='/comunidades'><FaUsers /></Link>
         <span className='btn-footerText'>Comunidades</span>
       </div>
     </div>

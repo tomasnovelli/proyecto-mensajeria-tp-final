@@ -1,0 +1,13 @@
+.addContactContainer{
+    height: 90vh;
+}
+.addContactHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 2px;
+    border-bottom: 1px solid var(--textArea-color);
+}
