@@ -1,0 +1,58 @@
+.userCall{
+    height: 100vh;
+    background-image: url("https://i.pinimg.com/736x/3a/2e/99/3a2e99d16f179dae33e2c394be2229fb.jpg");
+}
+.callEncryption{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;  
+    font-size: 13px;
+    padding: 10px;
+    width: 100%;
+    font-weight: 500;
+}
+.lockIconCall{
+    font-size: 16px;
+}
+.userInfoCardCall{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    height: 90%
+}
+.callContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    height: 100%;
+}
+
+.callButtons{
+    background-color: var(--textArea-color);
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 23px;
+}
+
+.btn-cutCallContainer{
+    color: white;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 17px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+}
+.btn-cutCall{
+    font-size: 20px;
+    padding-bottom: 2px;
+}

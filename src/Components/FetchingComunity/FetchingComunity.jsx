@@ -1,5 +1,6 @@
 import React from 'react'
 import FetchingPostList from '../FetchingPostList/FetchingPostList'
+import { render } from 'react-dom'
 
 const FetchingComunity = async () => {
         const URL_API = 'https://jsonplaceholder.typicode.com/'
@@ -7,10 +8,20 @@ const FetchingComunity = async () => {
             method: 'GET',
         })
         const apiInfo = await answer.json()
+        let renderPost = ''
+        for(const post of apiInfo){
+          renderPost = renderPost + `
+          <div>
+              <h2>${post.userId}</h2>
+              <h3>${post.title}</h3>
+              <p>${post.body}</p>
+          </div>
+          `
+      }
   return (
     <>
         <div>
-            {apiInfo}
+           {renderPost}
         </div>
     </>
   )

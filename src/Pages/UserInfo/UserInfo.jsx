@@ -13,14 +13,13 @@ import { FaRegHeart } from "react-icons/fa";
 const UserInfo = () => {
     const {
         getContactDataById,
-        contactListData,
         handleOpenCloseDropDownMenu,
         dropdown,
         handleCloseDropdown
     } = useGlobalContext()
 
     const params = useParams()
-    const contactData = getContactDataById(params.contact_id, contactListData)
+    const contactData = getContactDataById(params.contact_id)
 
     const {
         nombre,

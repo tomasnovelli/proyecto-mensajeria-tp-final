@@ -10,24 +10,27 @@ const AddContactForm = () => {
 
     const {contactListData, setContactListData  } = useGlobalContext()
     const navigate = useNavigate()
+
     const selectCountryNumberOptions = [
-        'AR +54',
-        'MX +52',
-        'CH +56',
-        'ES +34',
-        'US +1'
+            'AR +54',
+            'MX +52',
+            'CH +56',
+            'ES +34',
+            'US +1'   
     ]
+        
     const formSchema = {
         nombre: {
             validate: (value) => {
-                return Boolean(value) && value.length > 1 && value.length < 20
+                return Boolean(value) && value.length > 2 && value.length < 20
             },
             errorText: 'El nombre debe tener entre 2 a 19 caracteres alfanumericos'
         },
         phoneCountryId: {
             validate: (value) => {
                 return Boolean(value)
-            }
+            },
+            errorText: 'Debes seleccionar un pais'
         },
         phoneNumber: {
             validate: (value) => {
@@ -42,13 +45,14 @@ const AddContactForm = () => {
             errorText: 'Debes ingresar un mail valido'
         }
     }
-    const [errors, seterrors] = useState({})
+
+    const [errors, setErrors] = useState({})
 
     const addError = (error, origin) => {
-        seterrors((prevState) => ({ ...prevState, [origin]: error }))
+        setErrors((prevState) => ({ ...prevState, [origin]: error }))
     }
     const cleanError = (origin) => {
-        seterrors((prevState) => ({ ...prevState, [origin]: '' }))
+        setErrors((prevState) => ({...prevState}, delete errors[origin]))
     }
     const handleCreateContact = (e) => {
         e.preventDefault()
@@ -58,6 +62,7 @@ const AddContactForm = () => {
         for (const prop in formSchema) {
             newContactValues[prop] = newContactFormValues.get(prop)
             const validateResult = formSchema[prop].validate(newContactValues[prop])
+            console.log(validateResult)
             if (!validateResult) {
                 addError(formSchema[prop].errorText, prop)
             } else {
@@ -68,13 +73,14 @@ const AddContactForm = () => {
         newContactValues.thumbnail = '/images/newUserWhatsapp.jpg',
         newContactValues.ultima_conexion = 'ayer'
         newContactValues.mensajes = []
-        setContactListData([...contactListData, newContactValues])
-        guardarMensaje(newContactValues)
-        navigate('/')
+
+        if(errors === true){
+            setContactListData([...contactListData, newContactValues])
+            guardarMensaje(newContactValues)
+            navigate('/') 
+        }
         
     }
-    console.log(errors)
-
     return (
         <form className='addContactForm' onSubmit={handleCreateContact}>
             <div className='addContactInputsContainer'>
@@ -94,13 +100,15 @@ const AddContactForm = () => {
                     <div className='countrySelectContainer'>
                         <label className='countrySelectLabel' htmlFor="phoneCountryId">País</label>
                         <select className='inputsBorder' name="phoneCountryId" id="phoneCountryId">
+                            <option value={''} disabled>No seleccionado</option>
                             {selectCountryNumberOptions.map((option, index) => {
                                 return <option
                                     key={index + option}
                                     value={option}>{option}</option>
-                            })
+                                })
                             }
                         </select>
+                        {errors.phoneCountryId && <span className='errorAlertNCountry'>{errors.phoneCountryId}</span>}
                     </div>
                     <label htmlFor="phoneNumber"></label>
                     <input className='phoneNumber inputsBorder' type="text" placeholder='Teléfono' name="phoneNumber" id="phoneNumber" autoComplete="off" />
