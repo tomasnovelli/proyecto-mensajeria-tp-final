@@ -1,3 +1,12 @@
+
+.chatContainerYo{
+    display: flex;
+    justify-content: end;
+    width: 100%
+}
+.chatContainerOther{
+    display: flex;
+}
 .checkSeen{
     color: rgb(0, 195, 255);
 }
@@ -5,7 +14,6 @@
 .otroMessage, .yoMessage{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 70%;
     border: solid 1px rgba(0, 0, 0, 0.096);
     border-radius: 10px;
@@ -15,8 +23,6 @@
 
 .yoMessage{
     background-color: var(--chat-color);
-    position: relative;
-    left: 25%;
 }
 
 .otroMessage{

@@ -6,10 +6,10 @@ const Message = ({ author, text, date, state }) => {
     return (
         <>
 
-            <div className='chat-container'>
+            <div className='chatContainer'>
                 {
                     author == 'Yo'
-                        ? 
+                        ? <div className='chatContainerYo'>
                             <div className='yoMessage'>
                                 <p className='messageContent'>{text}</p>
                                 <div className='footerMessage'>
@@ -19,14 +19,16 @@ const Message = ({ author, text, date, state }) => {
                                         : <span className='checkDelivered'><i className="bi bi-check-all"></i></span>
                                     }
                                 </div>
+                            </div>
                         </div>
-                        : 
+                        :
+                        <div className='chatContainerOther'>
                             <div className='otroMessage'>
-                                <span className='author'>{author}</span>
                                 <p className='messageContent'>{text}</p>
                                 <div className='footerMessage'>
                                     <span className='date'>{date}</span>
                                 </div>
+                            </div>
                         </div>
                 }
             </div>

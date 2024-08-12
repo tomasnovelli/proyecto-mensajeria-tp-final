@@ -100,7 +100,7 @@ const AddContactForm = () => {
                     <div className='countrySelectContainer'>
                         <label className='countrySelectLabel' htmlFor="phoneCountryId">País</label>
                         <select className='inputsBorder' name="phoneCountryId" id="phoneCountryId">
-                            <option value={''} disabled>No seleccionado</option>
+                            <option value={''} disabled>Seleccionar</option>
                             {selectCountryNumberOptions.map((option, index) => {
                                 return <option
                                     key={index + option}

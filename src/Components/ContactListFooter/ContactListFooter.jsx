@@ -3,7 +3,7 @@ import './contactListFooterStyles.css'
 import { useGlobalContext } from '../GlobalContext/GlobalContext';
 
 const ContactListFooter = () => {
-  const { setNavigationState } = useGlobalContext()
+  const { setNavigationState, navigationState } = useGlobalContext()
   const sitesNavigation = [
     {
       icon: "bi bi-chat-left-text-fill",
@@ -24,7 +24,7 @@ const ContactListFooter = () => {
     <div className='contactListfooter'>
       {sitesNavigation.map(categoria => {
           return(
-            <button key={categoria.site} className='btn-contactFooter' onClick={() => handleChangeSite(categoria.site)}>
+            <button key={categoria.site} className='btn-contactFooter active' onClick={() => handleChangeSite(categoria.site)}>
                 <i className={categoria.icon}></i>
                 <span className='btn-footerText'>{categoria.site}</span>
             </button>

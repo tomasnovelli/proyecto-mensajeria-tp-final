@@ -37,8 +37,9 @@ const UserCall = () => {
                     <h2>{nombre}</h2>
                     <span>Llamando</span>
                 </div>
-
-                <div className='callButtons'>
+            </div>
+            
+            <div className='callButtons'>
                     <PiSpeakerSimpleHighBold />
                     <HiOutlineVideoCamera className='video' />
                     <LuMicOff className='mic' />
@@ -46,7 +47,6 @@ const UserCall = () => {
                             <ImPhoneHangUp className='btn-cutCall' />
                     </Link>
                 </div>
-            </div>
         </div>
 
     )
