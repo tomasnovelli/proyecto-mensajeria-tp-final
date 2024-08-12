@@ -14,7 +14,8 @@ const User = ({ userName, userImg, userConection, userId }) => {
     dropdown,
     setDropdown,
     handleOpenCloseDropDownMenu,
-    clearLocalStorage
+    clearLocalStorage,
+    handleCloseDropdown
   } = useGlobalContext()
 
   return (
@@ -41,11 +42,11 @@ const User = ({ userName, userImg, userConection, userId }) => {
           :
           <div className='userInfoChat'>
             <div className='userData'>
-              <Link to='/'><i className="backArrow bi bi-arrow-left-short"></i></Link>
+              <Link to='/' onClick={handleCloseDropdown}><i className="backArrow bi bi-arrow-left-short"></i></Link>
               <div className='imgContainer'>
                 <img className='userImg' src={userImg} alt={userName + 'Img'} />
               </div>
-              <Link to={'/chat/' + userId + '/info'} className='nameConection'>
+              <Link  to={'/chat/' + userId + '/info' } className='nameConection' onClick={handleCloseDropdown}>
                 <span className='userName'>{userName}</span>
                 <span className='userConection'>{userConection}</span>
               </Link>

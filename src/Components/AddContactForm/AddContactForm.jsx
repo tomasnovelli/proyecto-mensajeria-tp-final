@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import { useGlobalContext } from '../GlobalContext/GlobalContext'
 import { MdOutlinePhone } from "react-icons/md";
 import { MdOutlineSaveAlt } from "react-icons/md";
-
-
+import { useNavigate } from 'react-router-dom'
 import './AddContactFormStyles.css'
+import { guardarMensaje } from '../../Helpers/chatData';
+import {v4 as uuid} from 'uuid'
 const AddContactForm = () => {
-    const { handleCreateContact } = useGlobalContext()
 
+    const {contactListData, setContactListData  } = useGlobalContext()
+    const navigate = useNavigate()
     const selectCountryNumberOptions = [
         'AR +54',
         'MX +52',
@@ -15,19 +17,63 @@ const AddContactForm = () => {
         'ES +34',
         'US +1'
     ]
-    const fomrSchema = {
-        nombre: '',
-        phoneCountryId: '',
-        phoneNumber: '',
-        mailStorage: ''
+    const formSchema = {
+        nombre: {
+            validate: (value) => {
+                return Boolean(value) && value.length > 1 && value.length < 20
+            },
+            errorText: 'El nombre debe tener entre 2 a 19 caracteres alfanumericos'
+        },
+        phoneCountryId: {
+            validate: (value) => {
+                return Boolean(value)
+            }
+        },
+        phoneNumber: {
+            validate: (value) => {
+                return Boolean(value) && !isNaN(value) && value.length === 10
+            },
+            errorText: 'El numero de telefono debe tener 10 caracteres numericos'
+        },
+        mailStorage: {
+            validate: (value) => {
+                return Boolean(value) && /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(value)
+            },
+            errorText: 'Debes ingresar un mail valido'
+        }
     }
-    const [newContact, setNewContact] = useState(fomrSchema)
+    const [errors, seterrors] = useState({})
 
-    const handleContactChangeValue = (e) => {
-        const valueToChange = e.target.name
-        const newValue = e.target.value
-        setNewContact({ ...newContact, [valueToChange]: newValue })
+    const addError = (error, origin) => {
+        seterrors((prevState) => ({ ...prevState, [origin]: error }))
     }
+    const cleanError = (origin) => {
+        seterrors((prevState) => ({ ...prevState, [origin]: '' }))
+    }
+    const handleCreateContact = (e) => {
+        e.preventDefault()
+        const newContactForm = e.target
+        const newContactFormValues = new FormData(newContactForm)
+        const newContactValues = {}
+        for (const prop in formSchema) {
+            newContactValues[prop] = newContactFormValues.get(prop)
+            const validateResult = formSchema[prop].validate(newContactValues[prop])
+            if (!validateResult) {
+                addError(formSchema[prop].errorText, prop)
+            } else {
+                cleanError(prop)
+            }
+        }
+        newContactValues.id = uuid()
+        newContactValues.thumbnail = '/images/newUserWhatsapp.jpg',
+        newContactValues.ultima_conexion = 'ayer'
+        newContactValues.mensajes = []
+        setContactListData([...contactListData, newContactValues])
+        guardarMensaje(newContactValues)
+        navigate('/')
+        
+    }
+    console.log(errors)
 
     return (
         <form className='addContactForm' onSubmit={handleCreateContact}>
@@ -37,7 +83,8 @@ const AddContactForm = () => {
                         <i className="formIconsSize bi bi-person-fill"></i>
                     </div>
                     <label htmlFor="nombre"></label>
-                    <input className='inputsBorder' type="text" placeholder='Nombre' name='nombre' id='nombre' onChange={handleContactChangeValue} value={newContact.nombre} autoComplete="off" />
+                    <input className='inputsBorder' type="text" placeholder='Nombre' name='nombre' id='nombre' autoComplete="off" />
+                    {errors.nombre && <span className='errorAlertName'>{errors.nombre}</span>}
                 </div>
 
                 <div className='newUserPhoneNumberContainer'>
@@ -46,7 +93,7 @@ const AddContactForm = () => {
                     </div>
                     <div className='countrySelectContainer'>
                         <label className='countrySelectLabel' htmlFor="phoneCountryId">País</label>
-                        <select className='inputsBorder' name="phoneCountryId" id="phoneCountryId" onChange={handleContactChangeValue} value={newContact.phoneCountryId}>
+                        <select className='inputsBorder' name="phoneCountryId" id="phoneCountryId">
                             {selectCountryNumberOptions.map((option, index) => {
                                 return <option
                                     key={index + option}
@@ -56,7 +103,8 @@ const AddContactForm = () => {
                         </select>
                     </div>
                     <label htmlFor="phoneNumber"></label>
-                    <input className='phoneNumber inputsBorder' type="text" placeholder='Teléfono' name="phoneNumber" id="phoneNumber" onChange={handleContactChangeValue} value={newContact.phoneNumber} autoComplete="off" />
+                    <input className='phoneNumber inputsBorder' type="text" placeholder='Teléfono' name="phoneNumber" id="phoneNumber" autoComplete="off" />
+                    {errors.phoneNumber && <span className='errorAlertNumber'>{errors.phoneNumber}</span>}
                 </div>
 
                 <div className='newUserMailStorageContainer'>
@@ -65,7 +113,8 @@ const AddContactForm = () => {
                     </div>
                     <div className='mailStorageInputContainer'>
                         <label htmlFor="mailStorage">Guardar en</label>
-                        <input className='inputsBorder' type="text" placeholder='nombre@gmail.com' name='mailStorage' id='mailStorage' onChange={handleContactChangeValue} value={newContact.mailStorage} autoComplete="off" />
+                        <input className='inputsBorder' type="text" placeholder='nombre@gmail.com' name='mailStorage' id='mailStorage' autoComplete="off" />
+                        {errors.mailStorage && <span className='errorAlertMail'>{errors.mailStorage}</span>}
                     </div>
                 </div>
             </div>

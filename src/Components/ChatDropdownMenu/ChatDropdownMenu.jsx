@@ -13,7 +13,8 @@ const ChatDropdownMenu = ({ userId }) => {
         getContactIndex,
         dropdown,
         setDropdown,
-        handleOpenCloseDropDownMenu 
+        handleOpenCloseDropDownMenu,
+        handleCloseDropdown 
     } = useGlobalContext()
 
     const borrarMensajesDeContacto = () => {
@@ -29,9 +30,9 @@ const ChatDropdownMenu = ({ userId }) => {
         <div>
             {
                 dropdown &&
-                <div>
-                    <Link to={'/chat/' + userId + '/info'}>Ver Contacto</Link>
-                    <button onClick={borrarMensajesDeContacto}>Vaciar Chat</button>
+                <div className='chatDropdownMenu'>
+                    <Link className='contactInfoLink' onClick={handleCloseDropdown} to={'/chat/' + userId + '/info'}>Ver Contacto</Link>
+                    <button className='btn-cleanChat' onClick={borrarMensajesDeContacto}>Vaciar Chat</button>
                 </div>
             }
             <button className='burgerMenu' onClick={handleOpenCloseDropDownMenu}>

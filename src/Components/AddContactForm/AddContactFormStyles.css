@@ -84,3 +84,28 @@
     background-color: var(--app-color);
     border-radius: 20px;
 }
+
+.errorAlertName{
+    position: absolute;
+    top: 90px;
+    left: 55px;
+    font-size: 12px;
+    font-weight: 400;
+    color: red;
+}
+.errorAlertNumber{
+    position: absolute;
+    top: 176px;
+    left: 55px;
+    font-size: 12px;
+    font-weight: 400;
+    color: red;
+}
+.errorAlertMail{
+    position: absolute;
+    top: 260px;
+    left: 55px;
+    font-size: 12px;
+    font-weight: 400;
+    color: red;
+}

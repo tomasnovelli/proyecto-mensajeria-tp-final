@@ -16,7 +16,7 @@ const UserInfo = () => {
         contactListData,
         handleOpenCloseDropDownMenu,
         dropdown,
-        setDropdown
+        handleCloseDropdown
     } = useGlobalContext()
 
     const params = useParams()
@@ -34,7 +34,7 @@ const UserInfo = () => {
     return (
         <div className='userInfo'>
             <div className='userInfoHeader'>
-                <Link to={'/chat/' + id}><i className="backArrow bi bi-arrow-left-short"></i></Link>
+                <Link to={'/chat/' + id} onClick={handleCloseDropdown}><i className="backArrow bi bi-arrow-left-short"></i></Link>
                 <div className='userInfoCard'>
                     <div className='imgUser'>
                         <img src={thumbnail} alt="" />
@@ -42,7 +42,7 @@ const UserInfo = () => {
                     <h2>{nombre}</h2>
                     <span>{phoneCountryId + phoneNumber}</span>
                     <div className='btnFunctionContainer'>
-                        <Link to={'/chat/' + id + '/calling'}>
+                        <Link to={'/chat/' + id + '/calling'} onClick={handleCloseDropdown}>
                             <button className='btnFunction'>
                                 <i className="telephoneUser bi bi-telephone"></i>
                                 <span>Llamar</span>
@@ -52,7 +52,10 @@ const UserInfo = () => {
                 </div>
                 {
                     dropdown &&
-                    <Link to={'/'}>Ir a contactos</Link>
+                    <div className='chatDropdownMenu'>
+                        <Link className='contactInfoLink' to={'/'} onClick={handleCloseDropdown}>Ir a contactos</Link>
+                    </div>
+                    
                 }
                 <button className='burgerMenu' onClick={handleOpenCloseDropDownMenu}>
                     <i className="bi bi-three-dots-vertical"></i>

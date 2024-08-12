@@ -6,7 +6,6 @@ export const guardarHistorial = (historial) => {
 }
 
 export const obtenerHistorial = () =>{
-    localStorage.clear('historial')
     const historial = localStorage.getItem('historial')
     if(historial){
         return JSON.parse(historial)

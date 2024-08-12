@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { createContext, useContext } from 'react'
 import { guardarHistorial, guardarMensaje, obtenerHistorial } from '../../Helpers/chatData'
-import {v4 as uuid} from 'uuid'
-import { useNavigate } from 'react-router-dom'
+
+
 
 const GlobalContext = createContext()
 
@@ -14,7 +14,7 @@ export const GlobalContextProvider = ({ children }) => {
     const [dropdown, setDropdown] = useState(false)
     const [navigationState, setNavigationState] = useState('contacts')
 
-    const navigate = useNavigate()
+
     const getContactDataById = (id) => obtenerHistorial().find(contactos => contactos.id === id)
     const getContactIndex = (id, contactList) => contactList.findIndex(contact => contact.id === id)
 
@@ -34,6 +34,12 @@ export const GlobalContextProvider = ({ children }) => {
     const handleCleanSearchInput = (e) =>{
         setSearchContact('')
     }
+
+    const handleCloseDropdown = (e) =>{
+        if(dropdown = true){
+            setDropdown(!dropdown)
+        }
+    }
     
     useEffect(() => {
         const contactListToSearch = obtenerHistorial()
@@ -41,29 +47,7 @@ export const GlobalContextProvider = ({ children }) => {
             setContactListData(newContactList)
     }, [searchContact])
     
-    const handleCreateContact = (e) =>{
-        e.preventDefault()
-        const newContactForm = e.target
-        const newContactFormValues = new FormData(newContactForm)
 
-        const newContact = {
-            nombre: '',
-            phoneCountryId: '',
-            phoneNumber: '',
-            mailStorage: '',
-        }
-        for(let prop in newContact){
-            newContact[prop] = newContactFormValues.get(prop)
-        }
-        console.log(newContact)
-        newContact.id = uuid()
-        newContact.thumbnail = '/images/newUserWhatsapp.jpg',
-        newContact.ultima_conexion = 'ayer'
-        newContact.mensajes = []
-        setContactListData([...contactListData, newContact])
-        guardarMensaje(newContact)
-        navigate('/')
-    }
 
     const handleOpenCloseDropDownMenu = () => setDropdown(!dropdown)
     
@@ -86,14 +70,14 @@ export const GlobalContextProvider = ({ children }) => {
                     setTextInput,
                     searchContact,
                     handleChangeContent,
-                    handleCreateContact,
                     dropdown,
                     setDropdown,
                     handleOpenCloseDropDownMenu,
                     clearLocalStorage,
                     handleCleanSearchInput,
                     navigationState, 
-                    setNavigationState
+                    setNavigationState,
+                    handleCloseDropdown
                 }
             }>
                 {children}

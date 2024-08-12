@@ -10,7 +10,11 @@ import Comunity from '../Comunity/Comunity'
 
 
 const Contacts = () => {
-    const { contactListData, handleChangeContent, searchContact, navigationState } = useGlobalContext()
+    const { 
+        contactListData, 
+        handleChangeContent, 
+        searchContact, 
+        navigationState } = useGlobalContext()
 
     return (
         <>
