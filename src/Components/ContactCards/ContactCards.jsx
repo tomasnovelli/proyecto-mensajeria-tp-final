@@ -10,9 +10,9 @@ const ContactCards = ({ contactData }) => {
         thumbnail,
         lastConection,
         id,
-        mensajes
+        message
     } = contactData
-    const lastMessage = contactLastMessage(mensajes)
+    const lastMessage = contactLastMessage(message)
     return (
         <div className='contactsCardsContainer'>
             <div className='containerImg'>

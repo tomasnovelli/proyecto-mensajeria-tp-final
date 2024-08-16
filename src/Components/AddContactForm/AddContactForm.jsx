@@ -69,7 +69,7 @@ const AddContactForm = () => {
         newContactValues.id = uuid()
         newContactValues.thumbnail = '/images/newUserWhatsapp.jpg',
         newContactValues.lastConection = 'ayer'
-        newContactValues.mensajes = []
+        newContactValues.message = []
         console.log(newContactValues)
         if(errors == {}){
             return
@@ -98,9 +98,9 @@ const AddContactForm = () => {
                         <MdOutlinePhone />
                     </div>
                     <div className='countrySelectContainer'>
-                        <label className='countrySelectLabel' htmlFor="phoneCountryId">País</label>
+                        <label className='countrySelectLabel' htmlFor="phoneCountryId">Country</label>
                         <select className='inputsBorder' name="phoneCountryId" id="phoneCountryId">
-                            <option value={''} disabled>Seleccionar</option>
+                            <option value={''} disabled>Select</option>
                             {selectCountryNumberOptions.map((option, index) => {
                                 return <option
                                     key={index + option}
@@ -111,7 +111,7 @@ const AddContactForm = () => {
                         {errors.phoneCountryId && <span className='errorAlertNCountry'>{errors.phoneCountryId}</span>}
                     </div>
                     <label htmlFor="phoneNumber"></label>
-                    <input className='phoneNumber inputsBorder' type="text" placeholder='Teléfono' name="phoneNumber" id="phoneNumber" autoComplete="off" />
+                    <input className='phoneNumber inputsBorder' type="text" placeholder='Phone Number' name="phoneNumber" id="phoneNumber" autoComplete="off" />
                     {errors.phoneNumber && <span className='errorAlertNumber'>{errors.phoneNumber}</span>}
                 </div>
 
@@ -120,14 +120,14 @@ const AddContactForm = () => {
                         <MdOutlineSaveAlt />
                     </div>
                     <div className='mailStorageInputContainer'>
-                        <label htmlFor="mailStorage">Guardar en</label>
+                        <label htmlFor="mailStorage">Save In</label>
                         <input className='inputsBorder' type="text" placeholder='name@gmail.com' name='mailStorage' id='mailStorage' autoComplete="off" />
                         {errors.mailStorage && <span className='errorAlertMail'>{errors.mailStorage}</span>}
                     </div>
                 </div>
             </div>
             <div className='btn-addContactContainer'>
-                <button className='btn-addContactSubmit' type='submit'>Guardar</button>
+                <button className='btn-addContactSubmit' type='submit'>Save</button>
             </div>
         </form>
     )

@@ -1,4 +1,4 @@
-export const DATA_CONTACTOS = [
+export const DATA_CONTACT = [
     {
         name: 'Messi',
         thumbnail: '/images/messi-world-cup.jpg',
@@ -8,7 +8,7 @@ export const DATA_CONTACTOS = [
         phoneNumber: '9 11 4084-8975',
         mailStorage: 'tomas@gmail.com',
         userStateText: 'Orgulloso de ser argentino', 
-        mensajes: [
+        message: [
             {
                 author: 'Messi',
                 text: 'que hace amigo?',
@@ -39,7 +39,7 @@ export const DATA_CONTACTOS = [
         phoneNumber: '9 11 6498-7894',
         mailStorage: 'tomas@gmail.com',
         userStateText: 'Enamorada de mis 3 soles', 
-        mensajes: [
+        message: [
             {
                 author: 'Abuelita',
                 text: 'Hola querido, no te olvides por favor de traerme el tupper que te preste',
@@ -71,7 +71,7 @@ export const DATA_CONTACTOS = [
         phoneNumber: '9 11 4789-3145',
         mailStorage: 'tomas@gmail.com',
         userStateText: 'las penas son de nosotros, las vaquitas son ajenas',
-        mensajes: [
+        message: [
             {
                 author: 'Mollo',
                 text: 'Que hacees viejoo, che tengo dos entradas para el show de mañana te venis?',
@@ -104,7 +104,7 @@ export const DATA_CONTACTOS = [
         phoneNumber: '9 11 4789-3145',
         mailStorage: 'tomas@gmail.com',
         userStateText: 'Grabando nuevo disco', 
-        mensajes: [
+        message: [
             {
                 author: 'Nicky',
                 text: 'holaaa!',
@@ -135,7 +135,7 @@ export const DATA_CONTACTOS = [
         phoneNumber: '9 11 4789-3145',
         mailStorage: 'tomas@gmail.com',
         userStateText: 'El amoor despues del amor existe', 
-        mensajes: [
+        message: [
             {
                 author: 'Fito',
                 text: 'Que haceees CHEE',
@@ -166,7 +166,7 @@ export const DATA_CONTACTOS = [
         phoneNumber: '9 11 4789-3145',
         mailStorage: 'tomas@gmail.com',
         userStateText: 'No me hables, no me importas', 
-        mensajes: [
+        message: [
             {
                 author: 'Charly',
                 text: 'cuchame loco, alguna vez te preguntaste cuantas estrellas hay en el universo?',

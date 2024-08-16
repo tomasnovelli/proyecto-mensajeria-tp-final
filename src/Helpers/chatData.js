@@ -1,25 +1,25 @@
-import { DATA_CONTACTOS } from "../Data/dataMook"
+import { DATA_CONTACT  } from "../Data/dataMook"
 
-export const guardarHistorial = (historial) => {
-    const historialJSON = JSON.stringify(historial)
-    localStorage.setItem('historial', historialJSON)
+export const saveContactDatabase = (contactDataBase) => {
+    const contactDataBaseJSON = JSON.stringify(contactDataBase)
+    localStorage.setItem('contactDatabase', contactDataBaseJSON)
 }
 
-export const obtenerHistorial = () =>{
-    localStorage.clear('historial')
-    const historial = localStorage.getItem('historial')
-    if(historial){
-        return JSON.parse(historial)
+export const getContactDatabase = () =>{
+    localStorage.clear('contactDatabase')
+    const contactDataBase = localStorage.getItem('contactDatabase')
+    if(contactDataBase){
+        return JSON.parse(contactDataBase)
     } else{
-        guardarHistorial(DATA_CONTACTOS)
-        return DATA_CONTACTOS
+        saveContactDatabase(DATA_CONTACT)
+        return DATA_CONTACT 
     }
 }
 
-export const guardarMensaje= (nuevoMensaje) =>{
-    const listaHistorial = obtenerHistorial()
-    listaHistorial.push(nuevoMensaje)
-    guardarHistorial(listaHistorial)
+export const guardarMensaje= (newMessage) =>{
+    const contactDabaBaseList= getContactDatabase()
+    contactDabaBaseList.push(newMessage)
+    saveContactDatabase(contactDabaBaseList)
 
 }
 

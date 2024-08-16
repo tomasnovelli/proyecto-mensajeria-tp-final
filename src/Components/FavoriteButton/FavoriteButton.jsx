@@ -17,7 +17,7 @@ const FavoriteButton = () => {
                     <div className='addToFavorite'>
                         <button className='btn-addToFavorite' onClick={handleChangeFavoriteState}>
                             <IoMdHeartEmpty />
-                            <span className='addToFavoriteText'>Añadir a Favoritos</span>
+                            <span className='addToFavoriteText'>Add to favorite</span>
                         </button>
                         
                     </div>
@@ -25,7 +25,7 @@ const FavoriteButton = () => {
                     <div className='addToFavorite'>
                         <button className='btn-addToFavorite' onClick={handleChangeFavoriteState}>
                             <IoHeartDislikeOutline />
-                            <span className='addToFavoriteText'>Añadir a Favoritos</span>
+                            <span className='addToFavoriteText'>Remove from favorites</span>
                         </button>
                     
                     </div>

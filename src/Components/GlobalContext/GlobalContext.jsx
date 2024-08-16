@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { createContext, useContext } from 'react'
-import { guardarHistorial, guardarMensaje, obtenerHistorial } from '../../Helpers/chatData'
+import { getContactDatabase, saveContactDatabase } from '../../Helpers/chatData'
 
 
 
@@ -8,22 +8,22 @@ const GlobalContext = createContext()
 
 export const GlobalContextProvider = ({ children }) => {
 
-    const [contactListData, setContactListData] = useState(obtenerHistorial())
+    const [contactListData, setContactListData] = useState(getContactDatabase())
     const [textInput, setTextInput] = useState('')
     const [searchContact, setSearchContact] = useState('')
     const [dropdown, setDropdown] = useState(false)
     const [navigationState, setNavigationState] = useState('contacts')
 
 
-    const getContactDataById = (id) => obtenerHistorial().find(contactos => contactos.id === id)
+    const getContactDataById = (id) => getContactDatabase().find(contactos => contactos.id === id)
     const getContactIndex = (id, contactList) => contactList.findIndex(contact => contact.id === id)
 
     const updateContact = (contactData) => {
-        const updatedContactListData = obtenerHistorial()
+        const updatedContactListData = getContactDatabase()
         const contactIndex = getContactIndex(contactData.id, updatedContactListData)
         updatedContactListData[contactIndex] = contactData
         setContactListData(prevContactListData => updatedContactListData)
-        guardarHistorial(updatedContactListData)
+        saveContactDatabase(updatedContactListData)
     }
     const handleChangeContentValue = (e) => {
         setTextInput(e.target.value)
@@ -42,7 +42,7 @@ export const GlobalContextProvider = ({ children }) => {
     }
     
     useEffect(() => {
-        const contactListToSearch = obtenerHistorial()
+        const contactListToSearch = getContactDatabase()
             const newContactList = contactListToSearch.filter(contact => contact.name.toLowerCase().includes(searchContact.toLowerCase()))
             setContactListData(newContactList)
     }, [searchContact])
@@ -50,7 +50,7 @@ export const GlobalContextProvider = ({ children }) => {
     const handleOpenCloseDropDownMenu = () => setDropdown(!dropdown)
     
     const clearLocalStorage = () => {
-        localStorage.clear('historial')
+        localStorage.clear('contactDatabase')
         setDropdown(!dropdown)
     }
 

@@ -19,8 +19,8 @@ const WrittingText = ({ contactData }) => {
     }
     const updatedContactData = {
       ...contactData,
-      mensajes: [
-        ...contactData.mensajes,
+      message: [
+        ...contactData.message,
         nuevoMensaje
       ]
     }
@@ -37,7 +37,7 @@ const WrittingText = ({ contactData }) => {
           <div className='textAreaChild'>
             <label htmlFor="text"></label>
             <i className="bi bi-emoji-smile smileFace"></i>
-            <input className='textInput' placeholder='Mensaje' type="text" name='text' id='text' onChange={handleChangeContentValue} value={textInput} autoComplete="off" />
+            <input className='textInput' placeholder='Message' type="text" name='text' id='text' onChange={handleChangeContentValue} value={textInput} autoComplete="off" />
           </div>
           <div className='textAreaChild'>
             <i className="bi bi-paperclip"></i>

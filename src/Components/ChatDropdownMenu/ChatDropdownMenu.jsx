@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './ChatDropdownMenu.css'
 import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../GlobalContext/GlobalContext'
-import { guardarHistorial, obtenerHistorial } from '../../Helpers/chatData'
+import { saveContactDatabase , getContactDatabase } from '../../Helpers/chatData'
 
 
 const ChatDropdownMenu = ({ userId }) => {
@@ -16,12 +16,12 @@ const ChatDropdownMenu = ({ userId }) => {
         handleCloseDropdown 
     } = useGlobalContext()
 
-    const borrarMensajesDeContacto = () => {
-        const historial = obtenerHistorial()
-        const contactoBuscado = getContactIndex(userId, historial)
-        historial[contactoBuscado].mensajes = []
-        setContactListData(historial)
-        guardarHistorial(historial)
+    const borrarmessageDeContacto = () => {
+        const contactDataBase = getContactDatabase()
+        const searchedContactIndex = getContactIndex(userId, contactDataBase)
+        contactDataBase[searchedContactIndex ].message = []
+        setContactListData(contactDataBase)
+        saveContactDatabase (contactDataBase)
         setDropdown(!dropdown)
     }
 
@@ -30,8 +30,8 @@ const ChatDropdownMenu = ({ userId }) => {
             {
                 dropdown &&
                 <div className='chatDropdownMenu'>
-                    <Link className='contactInfoLink' onClick={handleCloseDropdown} to={'/chat/' + userId + '/info'}>Ver Contacto</Link>
-                    <button className='btn-cleanChat' onClick={borrarMensajesDeContacto}>Vaciar Chat</button>
+                    <Link className='contactInfoLink' onClick={handleCloseDropdown} to={'/chat/' + userId + '/info'}>See Contact</Link>
+                    <button className='btn-cleanChat' onClick={borrarmessageDeContacto}>Clear Chat</button>
                 </div>
             }
             <button className='burgerMenu' onClick={handleOpenCloseDropDownMenu}>

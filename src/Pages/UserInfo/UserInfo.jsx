@@ -5,7 +5,6 @@ import { Link, useParams } from 'react-router-dom'
 import { FaRegBell } from "react-icons/fa";
 import { FavoriteButton, SwitchButton } from '../../Components/index';
 import { AiOutlineLock } from "react-icons/ai";
-import { FaRegHeart } from "react-icons/fa";
 
 
 
@@ -44,7 +43,7 @@ const UserInfo = () => {
                         <Link to={'/chat/' + id + '/calling'} onClick={handleCloseDropdown}>
                             <button className='btnFunction'>
                                 <i className="telephoneUser bi bi-telephone"></i>
-                                <span>Llamar</span>
+                                <span>Call</span>
                             </button>
                         </Link>
                     </div>
@@ -52,7 +51,7 @@ const UserInfo = () => {
                 {
                     dropdown &&
                     <div className='chatDropdownMenu'>
-                        <Link className='contactInfoLink' to={'/'} onClick={handleCloseDropdown}>Ir a contactos</Link>
+                        <Link className='contactInfoLink' to={'/'} onClick={handleCloseDropdown}>Contact List</Link>
                     </div>
                     
                 }
@@ -69,7 +68,7 @@ const UserInfo = () => {
             <div className='notificationsState'>
                 <div className='notifications'>
                     <FaRegBell />
-                    <span>Notificaciones</span>
+                    <span>Notifications</span>
                 </div>
                 <div className="switch-button">
                     <SwitchButton />
@@ -79,8 +78,9 @@ const UserInfo = () => {
             <div className='messageEncryption'>
                 <AiOutlineLock className='lockIcon' />
                 <div className='messageEncryptionText'>
-                    <h2 className='encryptionTitle'>Cifrado</h2>
-                    <p className='encryptionText'>Los mensajes están cifrados de extremo a extremo. Haz clic para verificarlo.</p>
+                    <h2 className='encryptionTitle'>
+                    Encryption</h2>
+                    <p className='encryptionText'>Messages are end-to-end encrypted. Click to verify it..</p>
                 </div>
             </div>
             <FavoriteButton />
