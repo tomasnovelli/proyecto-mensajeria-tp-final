@@ -6,23 +6,22 @@ import { useGlobalContext } from '../GlobalContext/GlobalContext'
 const ContactCards = ({ contactData }) => {
     const {handleCleanSearchInput} = useGlobalContext()
     const {
-        nombre,
+        name,
         thumbnail,
-        ultima_conexion,
+        lastConection,
         id,
         mensajes
     } = contactData
     const lastMessage = contactLastMessage(mensajes)
-    console.log(contactData)
     return (
         <div className='contactsCardsContainer'>
             <div className='containerImg'>
-                <img src={thumbnail} alt={'img_' + nombre.toLowerCase()} />
+                <img src={thumbnail} alt={'img_' + name.toLowerCase()} />
             </div>
             <Link className='contactCard' to={'/chat/' + id} onClick={handleCleanSearchInput}>
                 <div className='topContactCardInfo'>
-                    <span>{nombre}</span>
-                    <span className='lastConection'>{ultima_conexion}</span>
+                    <span>{name}</span>
+                    <span className='lastConection'>{lastConection}</span>
                 </div>
                 <div className='bottomContactCardInfo'>
                     <span className='lastMessage'>{lastMessage}</span>

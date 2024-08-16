@@ -20,7 +20,7 @@ const AddContactForm = () => {
     ]
         
     const formSchema = {
-        nombre: {
+        name: {
             validate: (value) => {
                 return Boolean(value) && value.length > 2 && value.length < 20
             },
@@ -68,7 +68,7 @@ const AddContactForm = () => {
         }
         newContactValues.id = uuid()
         newContactValues.thumbnail = '/images/newUserWhatsapp.jpg',
-        newContactValues.ultima_conexion = 'ayer'
+        newContactValues.lastConection = 'ayer'
         newContactValues.mensajes = []
         console.log(newContactValues)
         if(errors == {}){
@@ -88,9 +88,9 @@ const AddContactForm = () => {
                     <div>
                         <i className="formIconsSize bi bi-person-fill"></i>
                     </div>
-                    <label htmlFor="nombre"></label>
-                    <input className='inputsBorder' type="text" placeholder='Nombre' name='nombre' id='nombre' autoComplete="off" />
-                    {errors.nombre && <span className='errorAlertName'>{errors.nombre}</span>}
+                    <label htmlFor="name"></label>
+                    <input className='inputsBorder' type="text" placeholder='name' name='name' id='name' autoComplete="off" />
+                    {errors.name && <span className='errorAlertName'>{errors.name}</span>}
                 </div>
 
                 <div className='newUserPhoneNumberContainer'>
@@ -121,7 +121,7 @@ const AddContactForm = () => {
                     </div>
                     <div className='mailStorageInputContainer'>
                         <label htmlFor="mailStorage">Guardar en</label>
-                        <input className='inputsBorder' type="text" placeholder='nombre@gmail.com' name='mailStorage' id='mailStorage' autoComplete="off" />
+                        <input className='inputsBorder' type="text" placeholder='name@gmail.com' name='mailStorage' id='mailStorage' autoComplete="off" />
                         {errors.mailStorage && <span className='errorAlertMail'>{errors.mailStorage}</span>}
                     </div>
                 </div>

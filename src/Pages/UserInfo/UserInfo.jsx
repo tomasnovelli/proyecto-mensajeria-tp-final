@@ -22,7 +22,7 @@ const UserInfo = () => {
     const contactData = getContactDataById(params.contact_id)
 
     const {
-        nombre,
+        name,
         thumbnail,
         id,
         phoneNumber,
@@ -38,7 +38,7 @@ const UserInfo = () => {
                     <div className='imgUser'>
                         <img src={thumbnail} alt="" />
                     </div>
-                    <h2>{nombre}</h2>
+                    <h2>{name}</h2>
                     <span>{phoneCountryId + phoneNumber}</span>
                     <div className='btnFunctionContainer'>
                         <Link to={'/chat/' + id + '/calling'} onClick={handleCloseDropdown}>

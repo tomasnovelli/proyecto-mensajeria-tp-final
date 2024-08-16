@@ -43,7 +43,7 @@ export const GlobalContextProvider = ({ children }) => {
     
     useEffect(() => {
         const contactListToSearch = obtenerHistorial()
-            const newContactList = contactListToSearch.filter(contact => contact.nombre.toLowerCase().includes(searchContact.toLowerCase()))
+            const newContactList = contactListToSearch.filter(contact => contact.name.toLowerCase().includes(searchContact.toLowerCase()))
             setContactListData(newContactList)
     }, [searchContact])
     

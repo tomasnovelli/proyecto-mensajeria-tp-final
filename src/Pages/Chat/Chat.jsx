@@ -13,7 +13,7 @@ const Chat = () => {
   return (
     <div className='chat'>
 
-      <Header userName={contactData.nombre} userImg={contactData.thumbnail} userId={contactData.id} userConection={contactData.ultima_conexion} />
+      <Header userName={contactData.name} userImg={contactData.thumbnail} userId={contactData.id} userConection={contactData.lastConection} />
       <ListChat dataMessage={contactData.mensajes} />
       <WrittingText contactData={contactData} />
     </div>

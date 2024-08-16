@@ -17,7 +17,7 @@ const UserCall = () => {
     const contactData = getContactDataById(params.contact_id)
 
     const {
-        nombre,
+        name,
         thumbnail,
         id
     } = contactData
@@ -34,7 +34,7 @@ const UserCall = () => {
                     <div className='imgUser'>
                         <img src={thumbnail} alt="" />
                     </div>
-                    <h2>{nombre}</h2>
+                    <h2>{name}</h2>
                     <span>Llamando</span>
                 </div>
             </div>

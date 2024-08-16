@@ -1,8 +1,8 @@
 export const DATA_CONTACTOS = [
     {
-        nombre: 'Messi',
+        name: 'Messi',
         thumbnail: '/images/messi-world-cup.jpg',
-        ultima_conexion: '19/12/2022',
+        lastConection: '19/12/2022',
         id: '1',
         phoneCountryId:'+54 ', 
         phoneNumber: '9 11 4084-8975',
@@ -31,10 +31,10 @@ export const DATA_CONTACTOS = [
         ]
     },
     {
-        nombre: 'Abuelita',
+        name: 'Abuelita',
         id: '2',
         thumbnail: '/images/abuela.jpg',
-        ultima_conexion: 'ayer',
+        lastConection: 'ayer',
         phoneCountryId:'+54 ',
         phoneNumber: '9 11 6498-7894',
         mailStorage: 'tomas@gmail.com',
@@ -63,10 +63,10 @@ export const DATA_CONTACTOS = [
         ]
     },
     {
-        nombre: 'Mollo',
+        name: 'Mollo',
         id: '3',
         thumbnail: '/images/mollo.jpg',
-        ultima_conexion: 'hoy',
+        lastConection: 'hoy',
         phoneCountryId:'+54 ',
         phoneNumber: '9 11 4789-3145',
         mailStorage: 'tomas@gmail.com',
@@ -96,10 +96,10 @@ export const DATA_CONTACTOS = [
         ]
     },
     {
-        nombre: 'Nicky',
+        name: 'Nicky',
         id: '4',
         thumbnail: '/images/nicky_nicole.webp',
-        ultima_conexion: '4/08/2024',
+        lastConection: '4/08/2024',
         phoneCountryId:'+54 ',
         phoneNumber: '9 11 4789-3145',
         mailStorage: 'tomas@gmail.com',
@@ -127,10 +127,10 @@ export const DATA_CONTACTOS = [
         ]
     },
     {
-        nombre: 'Fito',
+        name: 'Fito',
         id: '5',
         thumbnail: '/images/fito_paez.jpg',
-        ultima_conexion: 'ayer',
+        lastConection: 'ayer',
         phoneCountryId:'+54 ',
         phoneNumber: '9 11 4789-3145',
         mailStorage: 'tomas@gmail.com',
@@ -158,10 +158,10 @@ export const DATA_CONTACTOS = [
         ]
     },
     {
-        nombre: 'Charly',
+        name: 'Charly',
         id: '6',
         thumbnail: '/images/charly_garcia.jpg',
-        ultima_conexion: 'hoy',
+        lastConection: 'hoy',
         phoneCountryId:'+54 ',
         phoneNumber: '9 11 4789-3145',
         mailStorage: 'tomas@gmail.com',
