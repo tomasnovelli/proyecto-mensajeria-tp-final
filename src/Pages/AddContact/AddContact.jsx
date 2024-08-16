@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './addContactStyle.css'
-import { useGlobalContext } from '../../Components/GlobalContext/GlobalContext'
+
 import { AddContactForm } from '../../Components/index'
 
 const AddContact = () => {

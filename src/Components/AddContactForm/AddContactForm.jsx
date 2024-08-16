@@ -51,34 +51,34 @@ const AddContactForm = () => {
     const addError = (error, origin) => {
         setErrors((prevState) => ({ ...prevState, [origin]: error }))
     }
-    const cleanError = (origin) => {
-        setErrors((prevState) => ({...prevState}, delete errors[origin]))
-    }
+
     const handleCreateContact = (e) => {
         e.preventDefault()
         const newContactForm = e.target
         const newContactFormValues = new FormData(newContactForm)
         const newContactValues = {}
+        
         for (const prop in formSchema) {
             newContactValues[prop] = newContactFormValues.get(prop)
             const validateResult = formSchema[prop].validate(newContactValues[prop])
             console.log(validateResult)
             if (!validateResult) {
                 addError(formSchema[prop].errorText, prop)
-            } else {
-                cleanError(prop)
             }
         }
         newContactValues.id = uuid()
         newContactValues.thumbnail = '/images/newUserWhatsapp.jpg',
         newContactValues.ultima_conexion = 'ayer'
         newContactValues.mensajes = []
-
-        if(errors === true){
+        console.log(newContactValues)
+        if(errors == {}){
+            return
+        } else{
             setContactListData([...contactListData, newContactValues])
             guardarMensaje(newContactValues)
             navigate('/') 
         }
+        
         
     }
     return (

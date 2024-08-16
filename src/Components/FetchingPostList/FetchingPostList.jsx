@@ -1,9 +1,9 @@
 import React from 'react'
-
+import './fetchingPostList.css'
 const FetchingPostList = ({ info }) => {
     
   return (
-    <div>
+    <div className='comunityCardsContainer'>
         {
             info.map((post) => {
                 return (

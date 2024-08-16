@@ -24,6 +24,9 @@
     background-color: var(--textArea-color);
     font-weight: 500;
 }
+.contactSearchInput:focus{
+    outline: 1px solid var(--app-color) ;
+}
 
 .btn-addContact{
     background-color: var(--app-color);

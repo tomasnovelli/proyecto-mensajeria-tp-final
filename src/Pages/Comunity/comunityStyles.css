@@ -1,0 +1,18 @@
+.comunityPost{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    gap: 20px;
+    padding: 10px;
+
+}
+
+.comunityPost::-webkit-scrollbar{
+    width: 4px;
+}
+  .comunityPost::-webkit-scrollbar-thumb {
+    background-color: var(--app-color);    /* color of the scroll thumb */
+    border-radius: 20px;       
+  }

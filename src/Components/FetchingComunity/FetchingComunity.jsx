@@ -17,9 +17,9 @@ const FetchingComunity =  () => {
         }, [])
   return (
     <>
-        <div>
+        
            {info && <FetchingPostList info={info}/>}
-        </div>
+        
     </>
   )
 }

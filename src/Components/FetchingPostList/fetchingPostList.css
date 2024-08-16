@@ -1,0 +1,28 @@
+.postCards{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid var(--app-color);
+    border-radius: 20px;
+    padding: 10px;
+    background-color: var(--textArea-color);
+}
+
+.comunityCardsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 94%;
+}
+
+.postUserId{
+    margin-left: 48%;
+}
+
+.postTitle{
+    font-size: 16px;
+}
+.postBody{
+    font-size: 13px;
+}

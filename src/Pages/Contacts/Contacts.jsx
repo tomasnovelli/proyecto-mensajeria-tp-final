@@ -27,7 +27,7 @@ const Contacts = () => {
                     <Header />
                     <div className='contactSearch'>
                         <label htmlFor="contactSearch"></label>
-                        <input className='contactSearchInput' type="text" placeholder='Buscar contacto' name='contactSearch' id='contactSearch' onChange={handleChangeContent} value={searchContact} />
+                        <input className='contactSearchInput' type="text" placeholder='Buscar contacto' name='contactSearch' id='contactSearch' onChange={handleChangeContent} value={searchContact} autoComplete='off' />
                     </div>
                     <Link to={'/addContact'}>
                         <button className='btn-addContact'>

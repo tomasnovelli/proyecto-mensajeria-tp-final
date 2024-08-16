@@ -13,7 +13,7 @@ const ContactCards = ({ contactData }) => {
         mensajes
     } = contactData
     const lastMessage = contactLastMessage(mensajes)
-
+    console.log(contactData)
     return (
         <div className='contactsCardsContainer'>
             <div className='containerImg'>
