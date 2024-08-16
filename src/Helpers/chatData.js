@@ -16,7 +16,7 @@ export const getContactDatabase = () =>{
     }
 }
 
-export const guardarMensaje= (newMessage) =>{
+export const saveMessage = (newMessage) =>{
     const contactDabaBaseList= getContactDatabase()
     contactDabaBaseList.push(newMessage)
     saveContactDatabase(contactDabaBaseList)
