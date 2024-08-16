@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './chat.css'
 import { useParams } from 'react-router-dom'
 import { useGlobalContext } from '../../Components/GlobalContext/GlobalContext'
@@ -8,10 +7,9 @@ import { Header, ListChat, WrittingText } from '../../Components'
 
 const Chat = () => {
 
-  const { getContactDataById, contactListData} = useGlobalContext()
+  const { getContactDataById } = useGlobalContext()
   const params = useParams()
   const contactData = getContactDataById(params.contact_id)
-
   return (
     <div className='chat'>
 

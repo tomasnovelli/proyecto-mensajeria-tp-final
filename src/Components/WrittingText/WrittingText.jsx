@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './writtingText.css'
 import { useGlobalContext } from '../GlobalContext/GlobalContext'
 import { v4 as uuid } from 'uuid'
@@ -7,6 +7,7 @@ const WrittingText = ({ contactData }) => {
 
   const { textInput, handleChangeContentValue, setTextInput, updateContact } = useGlobalContext()
 
+ 
   const handleSubmit = (e) => {
     e.preventDefault()
     const nuevoMensaje = {
@@ -34,7 +35,7 @@ const WrittingText = ({ contactData }) => {
 
         <div className='textArea'>
           <div className='textAreaChild'>
-            <label htmlFor="text_input"></label>
+            <label htmlFor="text"></label>
             <i className="bi bi-emoji-smile smileFace"></i>
             <input className='textInput' placeholder='Mensaje' type="text" name='text' id='text' onChange={handleChangeContentValue} value={textInput} autoComplete="off" />
           </div>

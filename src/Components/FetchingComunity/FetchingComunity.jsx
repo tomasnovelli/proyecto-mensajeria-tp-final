@@ -1,27 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import FetchingPostList from '../FetchingPostList/FetchingPostList'
-import { render } from 'react-dom'
 
-const FetchingComunity = async () => {
-        const URL_API = 'https://jsonplaceholder.typicode.com/'
-        const answer = await fetch(URL_API + '/posts', {
-            method: 'GET',
-        })
-        const apiInfo = await answer.json()
-        let renderPost = ''
-        for(const post of apiInfo){
-          renderPost = renderPost + `
-          <div>
-              <h2>${post.userId}</h2>
-              <h3>${post.title}</h3>
-              <p>${post.body}</p>
-          </div>
-          `
-      }
+const FetchingComunity =  () => {
+        const [info, setInfo]= useState()
+
+      
+        const fetchInfo = async() =>{
+          const URL_API = 'https://jsonplaceholder.typicode.com/'
+          const answer = await fetch(URL_API + '/posts', {
+              method: 'GET',
+          })
+          setInfo(await answer.json())
+        }
+        useEffect(() => {
+          fetchInfo()
+        }, [])
   return (
     <>
         <div>
-           {renderPost}
+           {info && <FetchingPostList info={info}/>}
         </div>
     </>
   )

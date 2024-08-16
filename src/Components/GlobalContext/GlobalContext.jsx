@@ -47,8 +47,6 @@ export const GlobalContextProvider = ({ children }) => {
             setContactListData(newContactList)
     }, [searchContact])
     
-
-
     const handleOpenCloseDropDownMenu = () => setDropdown(!dropdown)
     
     const clearLocalStorage = () => {

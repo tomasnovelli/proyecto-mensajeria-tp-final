@@ -8,7 +8,6 @@ import { guardarHistorial, obtenerHistorial } from '../../Helpers/chatData'
 const ChatDropdownMenu = ({ userId }) => {
 
     const { 
-        contactListData,
         setContactListData,
         getContactIndex,
         dropdown,

@@ -4,7 +4,7 @@ import './contactCardsStyle.css'
 import { contactLastMessage } from '../../Helpers/chatData'
 import { useGlobalContext } from '../GlobalContext/GlobalContext'
 const ContactCards = ({ contactData }) => {
-    const {setSearchContact, handleCleanSearchInput} = useGlobalContext()
+    const {handleCleanSearchInput} = useGlobalContext()
     const {
         nombre,
         thumbnail,
