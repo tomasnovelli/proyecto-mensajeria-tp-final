@@ -21,9 +21,6 @@ const Contacts = () => {
             {
                 navigationState === 'contacts' &&
                 <div className='contacts'>
-                    <div className='addContactResponsive'>
-                        <AddContact />
-                    </div>
                     <Header />
                     <div className='contactSearch'>
                         <label htmlFor="contactSearch"></label>

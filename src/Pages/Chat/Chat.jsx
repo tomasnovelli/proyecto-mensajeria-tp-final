@@ -10,9 +10,9 @@ const Chat = () => {
   const { getContactDataById } = useGlobalContext()
   const params = useParams()
   const contactData = getContactDataById(params.contact_id)
+
   return (
     <div className='chat'>
-
       <Header userName={contactData.name} userImg={contactData.thumbnail} userId={contactData.id} userConection={contactData.lastConection} />
       <ListChat dataMessage={contactData.message} />
       <WrittingText contactData={contactData} />
