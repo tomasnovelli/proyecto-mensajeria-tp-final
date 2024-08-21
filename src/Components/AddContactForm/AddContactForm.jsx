@@ -51,36 +51,46 @@ const AddContactForm = () => {
     const addError = (error, origin) => {
         setErrors((prevState) => ({ ...prevState, [origin]: error }))
     }
-
-    const handleCreateContact = (e) => {
-        e.preventDefault()
-        const newContactForm = e.target
-        const newContactFormValues = new FormData(newContactForm)
-        const newContactValues = {}
-        
+    const cleanError = (origin) => {
+        setErrors((prevState) => {
+            const updatedErrors = {...prevState}
+            delete updatedErrors[origin]
+            return updatedErrors
+        })
+    }
+    const isFormValid = (formData) => {
+        let isValid = true
         for (const prop in formSchema) {
-            newContactValues[prop] = newContactFormValues.get(prop)
-            const validateResult = formSchema[prop].validate(newContactValues[prop])
-            console.log(validateResult)
-            if (!validateResult) {
+            const validateResult = formSchema[prop].validate(formData.get(prop))
+            if (validateResult) {
+                cleanError(prop)
+            }else{
                 addError(formSchema[prop].errorText, prop)
+                isValid = false
             }
         }
-        newContactValues.id = uuid()
-        newContactValues.thumbnail = '/images/newUserWhatsapp.jpg',
-        newContactValues.lastConection = 'ayer'
-        newContactValues.message = []
-        console.log(newContactValues)
-        if(errors == {}){
-            return
-        } else{
+        return isValid
+    }
+    const handleCreateContact = (e) => {
+        e.preventDefault()
+        const formData = new FormData(e.target)
+        if(isFormValid(formData)){
+            const newContactValues = {
+                id: uuid(),
+                thumbnail: '/images/newUserWhatsapp.jpg',
+                lastConection: 'ayer',
+                message: []
+            }
+            for (const prop in formSchema) {
+                newContactValues[prop] = formData.get(prop)
+            }
             setContactListData([...contactListData, newContactValues])
             saveMessage(newContactValues)
             navigate('/') 
         }
         
-        
     }
+
     return (
         <form className='addContactForm' onSubmit={handleCreateContact}>
             <div className='addContactInputsContainer'>
