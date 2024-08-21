@@ -3,7 +3,7 @@ import './userInfoStyle.css'
 import { useGlobalContext } from '../../Components/GlobalContext/GlobalContext'
 import { Link, useParams } from 'react-router-dom'
 import { FaRegBell } from "react-icons/fa";
-import { FavoriteButton, SwitchButton } from '../../Components/index';
+import { FavoriteButton, SwitchButton } from '../../Components/index.js';
 import { AiOutlineLock } from "react-icons/ai";
 
 

@@ -26,7 +26,7 @@ const UserCall = () => {
         <div className='userCall'>
             <div className='callEncryption'>
                 <AiOutlineLock className='lockIconCall' />
-                <span>Cifrado de extremo a extremo</span>
+                <span>End-to-end encryption</span>
             </div>
 
             <div className='callContainer'>
@@ -35,7 +35,7 @@ const UserCall = () => {
                         <img src={thumbnail} alt="" />
                     </div>
                     <h2>{name}</h2>
-                    <span>Llamando</span>
+                    <span>Calling...</span>
                 </div>
             </div>
             

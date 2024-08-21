@@ -7,6 +7,10 @@ import WrittingText from "./WrittingText/WrittingText";
 import SwitchButton from "./SwitchButton/SwitchButton";
 import FavoriteButton from "./FavoriteButton/FavoriteButton";
 import AddContactForm from "./AddContactForm/AddContactForm";
+import ContactListFooter from "./ContactListFooter/ContactListFooter";
+import ChatDropdownMenu from "./ChatDropdownMenu/ChatDropdownMenu";
+import FetchingPostList from "./FetchingPostList/FetchingPostList";
+import FetchingCommunity from "./FetchingCommunity/FetchingCommunity";
 
 
 export{
@@ -18,7 +22,11 @@ export{
     WrittingText,
     SwitchButton,
     FavoriteButton,
-    AddContactForm
+    AddContactForm,
+    ContactListFooter,
+    ChatDropdownMenu,
+    FetchingCommunity,
+    FetchingPostList,
 }
 
 

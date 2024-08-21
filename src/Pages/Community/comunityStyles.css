@@ -1,8 +1,8 @@
-.comunityTitle{
+.communityTitle{
   display: flex;
   justify-content: center
 }
-.comunityPost{
+.communityPost{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,10 +13,10 @@
 
 }
 
-.comunityPost::-webkit-scrollbar{
+.communityPost::-webkit-scrollbar{
     width: 4px;
 }
-  .comunityPost::-webkit-scrollbar-thumb {
+  .communityPost::-webkit-scrollbar-thumb {
     background-color: var(--app-color);    /* color of the scroll thumb */
     border-radius: 20px;       
   }

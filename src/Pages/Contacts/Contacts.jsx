@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './contacts.css'
-import ContactList from '../../Components/ContactList/ContactList'
 import { useGlobalContext } from '../../Components/GlobalContext/GlobalContext'
-import ContactListFooter from '../../Components/ContactListFooter/ContactListFooter'
 import { Link } from 'react-router-dom'
-import { Header } from '../../Components'
-import AddContact from '../AddContact/AddContact'
-import Comunity from '../Comunity/Comunity'
+import { ContactList, ContactListFooter, Header } from '../../Components/index.js'
+import Community from '../Community/Community.jsx'
+
 
 
 const Contacts = () => {
@@ -39,7 +37,7 @@ const Contacts = () => {
                 navigationState === 'community' &&
                 <div className='contacts'>
                     <Header />
-                    <Comunity />
+                    <Community />
                     <ContactListFooter activeSite={navigationState}/>
                 </div>
             }

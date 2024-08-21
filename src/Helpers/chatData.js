@@ -1,4 +1,4 @@
-import { DATA_CONTACT  } from "../Data/dataMook"
+import { DATA_CONTACT } from "../Data/dataMook"
 
 export const saveContactDatabase = (contactDataBase) => {
     const contactDataBaseJSON = JSON.stringify(contactDataBase)
@@ -16,9 +16,9 @@ export const getContactDatabase = () =>{
     }
 }
 
-export const saveMessage = (newMessage) =>{
+export const updateContactDataBase = (newContact) =>{
     const contactDabaBaseList= getContactDatabase()
-    contactDabaBaseList.push(newMessage)
+    contactDabaBaseList.push(newContact)
     saveContactDatabase(contactDabaBaseList)
 
 }

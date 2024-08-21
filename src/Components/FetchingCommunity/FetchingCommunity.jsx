@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import FetchingPostList from '../FetchingPostList/FetchingPostList'
 
-const FetchingComunity =  () => {
+const FetchingCommunity =  () => {
         const [info, setInfo]= useState()
 
       
@@ -24,4 +24,4 @@ const FetchingComunity =  () => {
   )
 }
 
-export default FetchingComunity
+export default FetchingCommunity

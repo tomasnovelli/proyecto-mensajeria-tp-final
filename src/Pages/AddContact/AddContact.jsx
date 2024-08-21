@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './addContactStyle.css'
-
-import { AddContactForm } from '../../Components/index'
+import { AddContactForm } from '../../Components/index.js'
 
 const AddContact = () => {
  

@@ -3,7 +3,7 @@ import './fetchingPostList.css'
 const FetchingPostList = ({ info }) => {
     
   return (
-    <div className='comunityCardsContainer'>
+    <div className='communityCardsContainer'>
         {
             info.map((post) => {
                 return (

@@ -1,12 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Contacts from './Pages/Contacts/Contacts'
-import Chat from './Pages/Chat/Chat'
-import UserInfo from './Pages/UserInfo/UserInfo'
-import AddContact from './Pages/AddContact/AddContact'
-import UserCall from './Pages/UserCall/UserCall'
-
-
+import { AddContact, Chat, Contacts, UserCall, UserInfo } from './Pages/index.js'
 
 function App() {
 

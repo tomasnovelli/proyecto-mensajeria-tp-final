@@ -4,7 +4,7 @@ import { MdOutlinePhone } from "react-icons/md";
 import { MdOutlineSaveAlt } from "react-icons/md";
 import { useNavigate } from 'react-router-dom'
 import './AddContactFormStyles.css'
-import { saveMessage } from '../../Helpers/chatData';
+import { updateContactDataBase } from '../../Helpers/chatData';
 import {v4 as uuid} from 'uuid'
 const AddContactForm = () => {
 
@@ -85,7 +85,7 @@ const AddContactForm = () => {
                 newContactValues[prop] = formData.get(prop)
             }
             setContactListData([...contactListData, newContactValues])
-            saveMessage(newContactValues)
+            updateContactDataBase(newContactValues)
             navigate('/') 
         }
     }

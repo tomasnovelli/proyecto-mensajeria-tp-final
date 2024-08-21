@@ -10,7 +10,6 @@ export const GlobalContextProvider = ({ children }) => {
 
     const [contactListData, setContactListData] = useState(getContactDatabase())
     const [textInput, setTextInput] = useState(''.trim())
-    console.log(textInput)
     const [searchContact, setSearchContact] = useState('')
     const [dropdown, setDropdown] = useState(false)
     const [navigationState, setNavigationState] = useState('contacts')
@@ -19,10 +18,10 @@ export const GlobalContextProvider = ({ children }) => {
     const getContactDataById = (id) => getContactDatabase().find(contactos => contactos.id === id)
     const getContactIndex = (id, contactList) => contactList.findIndex(contact => contact.id === id)
 
-    const updateContact = (contactData) => {
+    const updateContact = (updatedContactData) => {
         const updatedContactListData = getContactDatabase()
-        const contactIndex = getContactIndex(contactData.id, updatedContactListData)
-        updatedContactListData[contactIndex] = contactData
+        const contactIndex = getContactIndex(updatedContactData.id, updatedContactListData)
+        updatedContactListData[contactIndex] = updatedContactData
         setContactListData(prevContactListData => updatedContactListData)
         saveContactDatabase(updatedContactListData)
     }
