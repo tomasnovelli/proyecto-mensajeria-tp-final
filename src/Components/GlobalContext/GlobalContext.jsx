@@ -9,7 +9,7 @@ const GlobalContext = createContext()
 export const GlobalContextProvider = ({ children }) => {
 
     const [contactListData, setContactListData] = useState(getContactDatabase())
-    const [textInput, setTextInput] = useState(''.trim())
+    const [textInput, setTextInput] = useState('')
     const [searchContact, setSearchContact] = useState('')
     const [dropdown, setDropdown] = useState(false)
     const [navigationState, setNavigationState] = useState('contacts')
