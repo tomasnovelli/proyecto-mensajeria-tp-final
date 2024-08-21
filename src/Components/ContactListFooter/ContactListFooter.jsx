@@ -2,8 +2,9 @@ import React from 'react'
 import './contactListFooterStyles.css'
 import { useGlobalContext } from '../GlobalContext/GlobalContext';
 
-const ContactListFooter = () => {
-  const { setNavigationState, navigationState } = useGlobalContext()
+const ContactListFooter = ({activeSite}) => {
+
+  const { setNavigationState } = useGlobalContext()
   const sitesNavigation = [
     {
       icon: "bi bi-chat-left-text-fill",
@@ -12,7 +13,7 @@ const ContactListFooter = () => {
     },
     {
       icon: "bi bi-people-fill",
-      site: 'comunity'
+      site: 'community'
     }
   ]
   
@@ -24,7 +25,7 @@ const ContactListFooter = () => {
     <div className='contactListfooter'>
       {sitesNavigation.map(categoria => {
           return(
-            <button key={categoria.site} className='btn-contactFooter active' onClick={() => handleChangeSite(categoria.site)}>
+            <button key={categoria.site} className={`btn-contactFooter ${activeSite == categoria.site ? 'active' : ''}`} onClick={() => handleChangeSite(categoria.site)}>
                 <i className={categoria.icon}></i>
                 <span className='btn-footerText'>{categoria.site}</span>
             </button>

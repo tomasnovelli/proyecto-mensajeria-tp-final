@@ -88,7 +88,6 @@ const AddContactForm = () => {
             saveMessage(newContactValues)
             navigate('/') 
         }
-        
     }
 
     return (

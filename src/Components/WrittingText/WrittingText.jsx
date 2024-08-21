@@ -45,7 +45,7 @@ const WrittingText = ({ contactData }) => {
           </div>
         </div>
         {
-          !textInput || textInput === ' '
+          !textInput.trim()
             ? <button className='disabled btn-submit ' type="submit" disabled><i className="bi bi-send-fill"></i></button>
             :
             <button className='btn-submit' type="submit"><i className="bi bi-send-fill"></i></button>

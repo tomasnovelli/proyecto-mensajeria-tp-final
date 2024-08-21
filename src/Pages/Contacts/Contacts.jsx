@@ -32,16 +32,15 @@ const Contacts = () => {
                         </button>
                     </Link>
                     <ContactList dataMock={contactListData} />
-                    <ContactListFooter />
-
+                    <ContactListFooter activeSite={navigationState}/>
                 </div>
             }
             {
-                navigationState === 'comunity' &&
+                navigationState === 'community' &&
                 <div className='contacts'>
                     <Header />
                     <Comunity />
-                    <ContactListFooter />
+                    <ContactListFooter activeSite={navigationState}/>
                 </div>
             }
         </>
