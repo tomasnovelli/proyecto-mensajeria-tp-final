@@ -11,10 +11,27 @@
     background-color: transparent;
     border: none;
     font-size: 20px;
-    padding: 5px;
-    padding-left: 8px;
+    padding: 10px;
 }
 
 .addToFavoriteText{
     font-size: 17px;
 }
+
+@media screen and (min-width: 1200px){
+    .btn-addToFavorite{
+        font-size: 20px;
+        padding: 10px 0px 10px 48px;
+    }
+} 
+
+
+@media screen and (min-width: 1680px){
+    .btn-addToFavorite{
+        font-size: 35px;
+        padding: 10px 0px 10px 46px;
+    }
+    .addToFavoriteText{
+        font-size: 28px;
+    }
+} 

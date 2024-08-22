@@ -54,3 +54,56 @@
     font-size: 24px;
     margin-bottom: 3px;
 }
+
+@media screen and (min-width: 1200px){
+    .callEncryption{
+        gap: 12px;  
+        font-size: 16px;
+    }
+    .lockIconCall{
+        font-size: 18px;
+    }
+    .userInfoCardCall h2{
+        font-size: 28px;
+    }
+    .userInfoCardCall span{
+        font-size: 16px;
+    }
+    .callButtons{
+        font-size: 35px;
+    }
+    .btn-cutCallContainer{
+        width: 45px;
+        height: 45px;
+    }
+    .btn-cutCall{
+        font-size: 26px;
+
+    }
+}
+
+@media screen and (min-width: 1680px){
+    .callEncryption{
+        gap: 12px;  
+        font-size: 22px;
+    }
+    .lockIconCall{
+        font-size: 25px;
+    }
+    .userInfoCardCall h2{
+        font-size: 40px;
+    }
+    .userInfoCardCall span{
+        font-size: 25px;
+    }
+    .callButtons{
+        font-size: 50px;
+    }
+    .btn-cutCallContainer{
+        width: 65px;
+        height: 65px;
+    }
+    .btn-cutCall{
+        font-size: 40px;
+    }
+}

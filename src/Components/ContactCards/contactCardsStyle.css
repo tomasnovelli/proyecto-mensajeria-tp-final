@@ -51,6 +51,48 @@
 
 @media screen and (min-width: 1200px) {
     .contactsCardsContainer{
-        margin: 10px 15px 0px 15px;
+        margin: 5px 30px 13px 30px;
+        gap: 7px;
+    }
+    .containerImg {
+        width: 60px;
+        height: 60px;
+        
+    }
+    .topContactCardInfo{
+        font-size: 23px;
+    }
+    .contactCard{
+        gap: 3px;
+    }
+    .lastConection{
+        font-size: 15px;
+    }
+    .bottomContactCardInfo{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    .contactsCardsContainer{
+        margin: 5px 100px 13px 100px;
+        gap: 10px;
+    }
+    .containerImg {
+        width: 85px;
+        height: 85px;
+        
+    }
+    .topContactCardInfo{
+        font-size: 35px;
+    }
+    .contactCard{
+        gap: 8px;
+    }
+    .lastConection{
+        font-size: 22px;
+    }
+    .bottomContactCardInfo{
+        font-size: 20px;
     }
 }

@@ -19,7 +19,7 @@ const User = ({ userName, userImg, userConection, userId }) => {
   } = useGlobalContext()
 
   return (
-    <div>
+    <header>
       {
         userName === undefined
           ?
@@ -58,7 +58,7 @@ const User = ({ userName, userImg, userConection, userId }) => {
             </div>
           </div>
       }
-    </div>
+    </header>
   )
 }
 

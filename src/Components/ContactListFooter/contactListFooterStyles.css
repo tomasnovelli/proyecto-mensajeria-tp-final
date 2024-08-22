@@ -8,7 +8,6 @@
 }
 
 .btn-contactFooter{
-    padding: 4px;
     background-color: transparent;
     border: none;
     width: 80px;
@@ -29,3 +28,31 @@
     border-radius: 30px;
 }
 
+@media screen and (min-width: 1200px){
+    .contactListfooter{
+        height: 100px;
+    }
+    .btn-contactFooter{
+        padding: 4px;
+        width: 110px;
+        font-size: 30px;
+    }
+    .btn-footerText{
+        font-size: 13px;
+        margin-bottom: 3px;
+    }
+}
+
+@media screen and (min-width: 1680px){
+    .contactListfooter{
+        height: 120px;
+    }
+    .btn-contactFooter{
+
+        width: 150px;
+        font-size: 40px;
+    }
+    .btn-footerText{
+        font-size: 15px;
+    }
+} 

@@ -16,7 +16,7 @@
     height: 35px;
     border: none;
     border-radius: 15px;
-    padding-left: 10px;
+    padding-left: 15px;
     background-color: var(--textArea-color);
     font-weight: 500;
 }
@@ -41,6 +41,35 @@
 
 @media screen and (min-width: 1200px) {
     .contactSearchInput{
-        width: 93%;
+        width: 90%;
+        height: 40px;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    .btn-addContact{
+        font-size: 33px;
+        width: 62px;
+        height: 62px;
+        bottom: 100px;
+        right: 45px;
+        border-radius: 15px;
+    }
+
+}
+
+@media screen and (min-width: 1680px){
+    .contactSearchInput{
+        width: 83%;
+        height: 55px;
+        border-radius: 15px;
+        margin-top: 8px;
+        font-size: 20px;
+    }
+    .btn-addContact{
+        font-size: 40px;
+        width: 75px;
+        height: 75px;
+        bottom: 120px;
+        right: 135px;
     }
 }

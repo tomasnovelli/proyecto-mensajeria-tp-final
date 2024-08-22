@@ -7,10 +7,10 @@ const AddContact = () => {
  
     return (
         <div className='addContactContainer'>
-            <header className='addContactHeader'>
+            <div className='addContactHeader'>
                 <Link to='/'><i className="backArrow bi bi-arrow-left-short"></i></Link>
                 <span className='addContactTitle'>Add New Contact</span>
-            </header>
+            </div>
             <AddContactForm />
         </div>
     )

@@ -108,7 +108,7 @@ const AddContactForm = () => {
                     </div>
                     <div className='countrySelectContainer'>
                         <label className='countrySelectLabel' htmlFor="phoneCountryId">Country</label>
-                        <select className='inputsBorder' name="phoneCountryId" id="phoneCountryId">
+                        <select className='phoneCountryId inputsBorder' name="phoneCountryId" id="phoneCountryId">
                             <option value={''} disabled>Select</option>
                             {selectCountryNumberOptions.map((option, index) => {
                                 return <option
@@ -130,7 +130,7 @@ const AddContactForm = () => {
                     </div>
                     <div className='mailStorageInputContainer'>
                         <label htmlFor="mailStorage">Save In</label>
-                        <input className='inputsBorder' type="text" placeholder='name@gmail.com' name='mailStorage' id='mailStorage' autoComplete="off" />
+                        <input className='inputsBorder' type="text" placeholder='name@gmail.com' name='mailStorage' id='mailStorage' />
                         {errors.mailStorage && <span className='errorAlertMail'>{errors.mailStorage}</span>}
                     </div>
                 </div>

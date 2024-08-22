@@ -105,11 +105,14 @@
     .imgContainer{
         width: 60px;
         height: 60px;
-        margin-left: 40px;
-
+        margin-left: 45px;
+    }
+    .whatsappIcon{
+        width: 140px;
     }
     .btn-whatsapp{
-        margin-right: 40px;
+        margin-right: 22px;
+        font-size: 19px;
     }
     .backArrow{
         font-size: 40px;
@@ -128,7 +131,7 @@
 @media screen and (min-width: 1680px) {
     
     .userInfoChat{
-        height: 93px;
+        height: 100px;
     }
     .userName{
         font-weight: 500;
@@ -140,13 +143,17 @@
         font-weight: 300;
     }
     .imgContainer{
-        width: 80px;
-        height: 80px;
-        margin-left: 40px;
+        width: 85px;
+        height: 85px;
+        margin-left: 60px;
 
+    }
+    .whatsappIcon{
+        width: 180px;
     }
     .btn-whatsapp{
         margin-right: 40px;
+        font-size: 25px;
     }
     .backArrow{
         font-size: 50px;
@@ -154,7 +161,8 @@
         left: 30px;
     }
     .interactiveButtons{
-        margin-right: 25px;
+        margin-right: 45px;
+        gap: 18px;
     }
     .camera, .telephone{
         font-size: 45px;

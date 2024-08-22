@@ -22,7 +22,7 @@ const ContactListFooter = ({activeSite}) => {
   }
 
   return (
-    <div className='contactListfooter'>
+    <footer className='contactListfooter'>
       {sitesNavigation.map(categoria => {
           return(
             <button key={categoria.site} className={`btn-contactFooter ${activeSite == categoria.site ? 'active' : ''}`} onClick={() => handleChangeSite(categoria.site)}>
@@ -32,7 +32,7 @@ const ContactListFooter = ({activeSite}) => {
           )
         })
       }
-    </div>
+    </footer>
   )
 }
 

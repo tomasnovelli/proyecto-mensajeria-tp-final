@@ -1,3 +1,10 @@
+.communityCardsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 94%;
+}
 .postCards{
     display: flex;
     flex-direction: column;
@@ -7,15 +14,6 @@
     padding: 10px;
     background-color: var(--textArea-color);
 }
-
-.communityCardsContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    width: 94%;
-}
-
 .postUserId{
     margin-left: 48%;
 }
@@ -40,6 +38,25 @@
 
     }
     .postCards{
-        width: 300px;
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    .communityCardsContainer{
+        gap: 15px;
+    }
+    .postCards{
+        width: 490px;
+        gap: 20px;
+    }
+    .postUserId{
+        font-size: 30px;
+    }
+    .postTitle{
+        font-size: 20px;
+    }
+    .postBody{
+        font-size: 18px;
     }
 }
