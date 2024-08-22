@@ -22,25 +22,25 @@ const AddContactForm = () => {
             validate: (value) => {
                 return Boolean(value) && value.length > 2 && value.length < 20
             },
-            errorText: 'El nombre debe tener entre 2 a 19 caracteres alfanumericos'
+            errorText: 'The name must be between 2 to 19 alphanumeric characters'
         },
         phoneCountryId: {
             validate: (value) => {
                 return Boolean(value)
             },
-            errorText: 'Debes seleccionar un pais'
+            errorText: 'You must select a country'
         },
         phoneNumber: {
             validate: (value) => {
                 return Boolean(value) && !isNaN(value) && value.length === 10
             },
-            errorText: 'El numero de telefono debe tener 10 caracteres numericos'
+            errorText: 'The phone number must be 10 numerical characters'
         },
         mailStorage: {
             validate: (value) => {
                 return Boolean(value) && /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(value)
             },
-            errorText: 'Debes ingresar un mail valido'
+            errorText: 'You must enter a valid email'
         }
     }
     const [errors, setErrors] = useState({})
