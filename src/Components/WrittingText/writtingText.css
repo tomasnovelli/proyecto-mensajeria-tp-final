@@ -3,14 +3,12 @@
     background-color: transparent;
     padding: 2px 5px 5px 5px;
 }
-
 .form {
     display: flex;
     align-items: center;
     gap: 4px;
     margin: 0px 5px 0px 5px;
 }
-
 .textArea {
     display: flex;
     align-items: center;
@@ -22,7 +20,6 @@
     padding-left: 2px;
     padding: 0px 10px 0px 10px;
 }
-
 .textArea .textAreaChild:nth-child(1) {
     display: flex;
     justify-content: center;
@@ -30,7 +27,6 @@
     gap: 4px;
     flex: 7;
 }
-
 .textArea .textAreaChild:nth-child(2) {
     display: flex;
     justify-content: center;
@@ -38,7 +34,6 @@
     gap: 4px;
     flex: 1;
 }
-
 .textInput {
     width: 100%;
     color: rgb(65, 65, 65);
@@ -49,15 +44,12 @@
     height: 40px;
     padding-left: 2px;
 }
-
 .textInput::placeholder {
     color: rgb(58, 58, 58);
 }
-
 .textInput:focus {
     outline: none;
 }
-
 .btn-submit {
     background-color: var(--app-color);
     width: 40px;
@@ -68,11 +60,9 @@
     margin-left: 3px;
     font-size: 17px;
 }
-
 .disabled {
     background-color: grey;
 }
-
 .smileFace, .bi-paperclip, .bi-camera {
     color: rgb(58, 58, 58);
     font-size: 18px;
@@ -85,13 +75,10 @@
         width: 93%;
         margin: 0px 5px 0px 30px;
     }
-
     .textArea .textAreaChild:nth-child(2) {
         position: relative;
         left: 20px;
     }
-
-
 }
 
 @media screen and (min-width: 980px) {
@@ -109,7 +96,6 @@
     .textInput {
         font-size: 20px;
         height: 50px;
-
     }
     .textInput::placeholder {
         font-size: 16px;
@@ -130,10 +116,8 @@
     .form {
         margin: 0px 5px 0px 80px;
     }
-
     .textArea {
         border-radius: 30px;
-
     }
     .textInput {
         font-size: 25px;

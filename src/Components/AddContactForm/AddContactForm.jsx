@@ -5,20 +5,18 @@ import { MdOutlineSaveAlt } from "react-icons/md";
 import { useNavigate } from 'react-router-dom'
 import './AddContactFormStyles.css'
 import { updateContactDataBase } from '../../Helpers/chatData';
-import {v4 as uuid} from 'uuid'
+import { v4 as uuid } from 'uuid'
 const AddContactForm = () => {
-
-    const {contactListData, setContactListData  } = useGlobalContext()
+    
+    const { contactListData, setContactListData } = useGlobalContext()
     const navigate = useNavigate()
-
     const selectCountryNumberOptions = [
-            'AR +54',
-            'MX +52',
-            'CH +56',
-            'ES +34',
-            'US +1'   
+        'AR +54',
+        'MX +52',
+        'CH +56',
+        'ES +34',
+        'US +1'
     ]
-        
     const formSchema = {
         name: {
             validate: (value) => {
@@ -45,15 +43,13 @@ const AddContactForm = () => {
             errorText: 'Debes ingresar un mail valido'
         }
     }
-
     const [errors, setErrors] = useState({})
-
     const addError = (error, origin) => {
         setErrors((prevState) => ({ ...prevState, [origin]: error }))
     }
     const cleanError = (origin) => {
         setErrors((prevState) => {
-            const updatedErrors = {...prevState}
+            const updatedErrors = { ...prevState }
             delete updatedErrors[origin]
             return updatedErrors
         })
@@ -64,7 +60,7 @@ const AddContactForm = () => {
             const validateResult = formSchema[prop].validate(formData.get(prop))
             if (validateResult) {
                 cleanError(prop)
-            }else{
+            } else {
                 addError(formSchema[prop].errorText, prop)
                 isValid = false
             }
@@ -74,7 +70,7 @@ const AddContactForm = () => {
     const handleCreateContact = (e) => {
         e.preventDefault()
         const formData = new FormData(e.target)
-        if(isFormValid(formData)){
+        if (isFormValid(formData)) {
             const newContactValues = {
                 id: uuid(),
                 thumbnail: '/images/newUserWhatsapp.jpg',
@@ -86,7 +82,7 @@ const AddContactForm = () => {
             }
             setContactListData([...contactListData, newContactValues])
             updateContactDataBase(newContactValues)
-            navigate('/') 
+            navigate('/')
         }
     }
 
@@ -114,7 +110,7 @@ const AddContactForm = () => {
                                 return <option
                                     key={index + option}
                                     value={option}>{option}</option>
-                                })
+                            })
                             }
                         </select>
                         {errors.phoneCountryId && <span className='errorAlertNCountry'>{errors.phoneCountryId}</span>}

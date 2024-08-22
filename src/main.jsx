@@ -5,7 +5,6 @@ import './global.css'
 import { BrowserRouter } from 'react-router-dom'
 import { GlobalContextProvider } from './Components/GlobalContext/GlobalContext.jsx'
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
         <GlobalContextProvider>

@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { createContext, useContext } from 'react'
 import { getContactDatabase, saveContactDatabase } from '../../Helpers/chatData'
 
-
-
 const GlobalContext = createContext()
 
 export const GlobalContextProvider = ({ children }) => {
@@ -13,7 +11,6 @@ export const GlobalContextProvider = ({ children }) => {
     const [searchContact, setSearchContact] = useState('')
     const [dropdown, setDropdown] = useState(false)
     const [navigationState, setNavigationState] = useState('contacts')
-
 
     const getContactDataById = (id) => getContactDatabase().find(contactos => contactos.id === id)
     const getContactIndex = (id, contactList) => contactList.findIndex(contact => contact.id === id)
@@ -28,27 +25,23 @@ export const GlobalContextProvider = ({ children }) => {
     const handleChangeContentValue = (e) => {
         setTextInput(e.target.value)
     }
-    const handleChangeContent = (e) =>{
+    const handleChangeContent = (e) => {
         setSearchContact(e.target.value)
     }
-    const handleCleanSearchInput = (e) =>{
+    const handleCleanSearchInput = (e) => {
         setSearchContact('')
     }
-
-    const handleCloseDropdown = (e) =>{
-        if(dropdown = true){
+    const handleCloseDropdown = (e) => {
+        if (dropdown = true) {
             setDropdown(!dropdown)
         }
     }
-    
     useEffect(() => {
         const contactListToSearch = getContactDatabase()
-            const newContactList = contactListToSearch.filter(contact => contact.name.toLowerCase().includes(searchContact.toLowerCase()))
-            setContactListData(newContactList)
+        const newContactList = contactListToSearch.filter(contact => contact.name.toLowerCase().includes(searchContact.toLowerCase()))
+        setContactListData(newContactList)
     }, [searchContact])
-    
     const handleOpenCloseDropDownMenu = () => setDropdown(!dropdown)
-    
     const clearLocalStorage = () => {
         localStorage.clear('contactDatabase')
         setDropdown(!dropdown)
@@ -73,7 +66,7 @@ export const GlobalContextProvider = ({ children }) => {
                     handleOpenCloseDropDownMenu,
                     clearLocalStorage,
                     handleCleanSearchInput,
-                    navigationState, 
+                    navigationState,
                     setNavigationState,
                     handleCloseDropdown
                 }
@@ -85,9 +78,7 @@ export const GlobalContextProvider = ({ children }) => {
 }
 
 export const useGlobalContext = () => {
-
     return useContext(GlobalContext)
-
 }
 
 

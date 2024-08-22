@@ -16,14 +16,12 @@
     padding-top: 6px;
     padding: 6px 0px 10px 0px;
 }
-
 .userInfoCard{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 7px;
 }
-
 .imgUser{
     width: 90px;
     height: 90px;
@@ -33,7 +31,6 @@
     justify-content: center;
     padding: 0px 15px 0px 15px;
 }
-
 .btnFunctionContainer{
     display: flex;
     justify-content: center;
@@ -50,12 +47,10 @@
     background-color: transparent;
     font-size: 15px;
 }
-
 .telephoneUser{
     font-size: 20px;
     color: var(--app-color);
 }
-
 .userStateText{
     display: flex;
     align-items: center;
@@ -64,7 +59,6 @@
     padding: 15px;
     padding-left: 10px;
 }
-
 .notificationsState{
     display: flex;
     align-items: center;
@@ -79,7 +73,6 @@
     justify-content: center;
     gap: 20px;
 }
-
 .messageEncryption{
     display: flex;
     gap: 17px;

@@ -1,13 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './writtingText.css'
 import { useGlobalContext } from '../GlobalContext/GlobalContext'
 import { v4 as uuid } from 'uuid'
-
 const WrittingText = ({ contactData }) => {
 
   const { textInput, handleChangeContentValue, setTextInput, updateContact } = useGlobalContext()
-
- 
   const handleSubmit = (e) => {
     e.preventDefault()
     const nuevoMensaje = {
@@ -29,10 +26,8 @@ const WrittingText = ({ contactData }) => {
   }
 
   return (
-
     <div className='writtingText'>
       <form className='form' onSubmit={handleSubmit}>
-
         <div className='textArea'>
           <div className='textAreaChild'>
             <label htmlFor="text"></label>
@@ -50,10 +45,8 @@ const WrittingText = ({ contactData }) => {
             :
             <button className='btn-submit' type="submit"><i className="bi bi-send-fill"></i></button>
         }
-
       </form>
     </div>
-
   )
 }
 

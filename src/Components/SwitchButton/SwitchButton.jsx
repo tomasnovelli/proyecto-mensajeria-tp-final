@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './switchButtonStyles.css'
-import { useGlobalContext } from '../GlobalContext/GlobalContext';
 
 const SwitchButton = () => {
     
@@ -8,6 +7,7 @@ const SwitchButton = () => {
     const handleChangeSwitchState = (e) => {
         setSwitchState(!switchState)
     }
+
     return (
         <div>
             {

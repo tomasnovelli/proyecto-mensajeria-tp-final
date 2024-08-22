@@ -9,18 +9,10 @@ import { HiOutlineVideoCamera } from "react-icons/hi2";
 import './userCall.css'
 
 const UserCall = () => {
-    const {
-        getContactDataById,
-    } = useGlobalContext()
-
+    const { getContactDataById } = useGlobalContext()
     const params = useParams()
     const contactData = getContactDataById(params.contact_id)
-
-    const {
-        name,
-        thumbnail,
-        id
-    } = contactData
+    const { name, thumbnail, id } = contactData
 
     return (
         <div className='userCall'>
@@ -28,7 +20,6 @@ const UserCall = () => {
                 <AiOutlineLock className='lockIconCall' />
                 <span>End-to-end encryption</span>
             </div>
-
             <div className='callContainer'>
                 <div className='userInfoCardCall'>
                     <div className='imgUser'>
@@ -38,17 +29,15 @@ const UserCall = () => {
                     <span>Calling...</span>
                 </div>
             </div>
-            
             <div className='callButtons'>
-                    <PiSpeakerSimpleHighBold />
-                    <HiOutlineVideoCamera className='video' />
-                    <LuMicOff className='mic' />
-                    <Link className='btn-cutCallContainer' to={'/chat/' + id + '/info'}>
-                            <ImPhoneHangUp className='btn-cutCall' />
-                    </Link>
-                </div>
+                <PiSpeakerSimpleHighBold />
+                <HiOutlineVideoCamera className='video' />
+                <LuMicOff className='mic' />
+                <Link className='btn-cutCallContainer' to={'/chat/' + id + '/info'}>
+                    <ImPhoneHangUp className='btn-cutCall' />
+                </Link>
+            </div>
         </div>
-
     )
 }
 

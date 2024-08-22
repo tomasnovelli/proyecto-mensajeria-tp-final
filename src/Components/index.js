@@ -12,7 +12,6 @@ import ChatDropdownMenu from "./ChatDropdownMenu/ChatDropdownMenu";
 import FetchingPostList from "./FetchingPostList/FetchingPostList";
 import FetchingCommunity from "./FetchingCommunity/FetchingCommunity";
 
-
 export{
     ContactCards,
     ContactList,

@@ -4,7 +4,8 @@ import './contactCardsStyle.css'
 import { contactLastMessage } from '../../Helpers/chatData'
 import { useGlobalContext } from '../GlobalContext/GlobalContext'
 const ContactCards = ({ contactData }) => {
-    const {handleCleanSearchInput} = useGlobalContext()
+
+    const { handleCleanSearchInput } = useGlobalContext()
     const {
         name,
         thumbnail,
@@ -13,6 +14,7 @@ const ContactCards = ({ contactData }) => {
         message
     } = contactData
     const lastMessage = contactLastMessage(message)
+
     return (
         <div className='contactsCardsContainer'>
             <div className='containerImg'>

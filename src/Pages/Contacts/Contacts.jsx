@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom'
 import { ContactList, ContactListFooter, Header } from '../../Components/index.js'
 import Community from '../Community/Community.jsx'
 
-
-
 const Contacts = () => {
     const { 
         contactListData, 

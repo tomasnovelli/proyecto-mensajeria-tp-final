@@ -6,28 +6,22 @@ import { FaRegBell } from "react-icons/fa";
 import { FavoriteButton, SwitchButton } from '../../Components/index.js';
 import { AiOutlineLock } from "react-icons/ai";
 
-
-
-
 const UserInfo = () => {
+    
     const {
         getContactDataById,
         handleOpenCloseDropDownMenu,
         dropdown,
-        handleCloseDropdown
-    } = useGlobalContext()
-
+        handleCloseDropdown } = useGlobalContext()
     const params = useParams()
     const contactData = getContactDataById(params.contact_id)
-
     const {
         name,
         thumbnail,
         id,
         phoneNumber,
         phoneCountryId,
-        userStateText
-    } = contactData
+        userStateText } = contactData
 
     return (
         <div className='userInfo'>
@@ -53,18 +47,14 @@ const UserInfo = () => {
                     <div className='chatDropdownMenu'>
                         <Link className='contactInfoLink' to={'/'} onClick={handleCloseDropdown}>Contact List</Link>
                     </div>
-                    
                 }
                 <button className='burgerMenu' onClick={handleOpenCloseDropDownMenu}>
                     <i className="bi bi-three-dots-vertical"></i>
                 </button>
-
             </div>
-
             <div className='userStateText'>
                 <span>{userStateText}</span>
             </div>
-
             <div className='notificationsState'>
                 <div className='notifications'>
                     <FaRegBell />
@@ -74,12 +64,11 @@ const UserInfo = () => {
                     <SwitchButton />
                 </div>
             </div>
-
             <div className='messageEncryption'>
                 <AiOutlineLock className='lockIcon' />
                 <div className='messageEncryptionText'>
                     <h2 className='encryptionTitle'>
-                    Encryption</h2>
+                        Encryption</h2>
                     <p className='encryptionText'>Messages are end-to-end encrypted. Click to verify it..</p>
                 </div>
             </div>

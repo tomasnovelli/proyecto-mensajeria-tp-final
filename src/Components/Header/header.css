@@ -54,19 +54,15 @@
     font-size: 25px;
     text-decoration: none;
     color: var(--fontColor);
-
 }
-
 .interactiveButtons{
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 .camera, .telephone{
     font-size: 25px;
 }
-
 
 @media screen and (min-width: 768px) {
     .imgContainer{
@@ -88,7 +84,6 @@
 @media screen and (min-width: 1200px) {
     .userData{
         gap: 10px;
-    
     }
     .userInfoChat{
         height: 70px;
@@ -97,7 +92,6 @@
         font-weight: 500;
         font-size: 25px;
     }
-
     .userConection{
         font-size: 16px;
         font-weight: 300;
@@ -127,9 +121,7 @@
     }
 }
 
-
 @media screen and (min-width: 1680px) {
-    
     .userInfoChat{
         height: 100px;
     }
@@ -137,7 +129,6 @@
         font-weight: 500;
         font-size: 35px;
     }
-
     .userConection{
         font-size: 20px;
         font-weight: 300;
@@ -146,7 +137,6 @@
         width: 85px;
         height: 85px;
         margin-left: 60px;
-
     }
     .whatsappIcon{
         width: 180px;

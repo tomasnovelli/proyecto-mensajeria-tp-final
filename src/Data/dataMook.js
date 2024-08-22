@@ -49,14 +49,13 @@ export const DATA_CONTACT = [
             {
                 author: 'Yo',
                 text: 'Hola abuu, jaja noooo! tranqui mañana te lo llevo',
-                state: 'no entregado',
+                state: 'visto',
                 date: '21:30',
                 id: 23
             },
             {
                 author: 'Abuelita',
                 text: 'Bueeeno mi amor, nos vemos mañana entonces :)',
-                state: 'visto',
                 date: '21:33',
                 id: 24
             },
@@ -75,7 +74,6 @@ export const DATA_CONTACT = [
             {
                 author: 'Mollo',
                 text: 'Que hacees viejoo, che tengo dos entradas para el show de mañana te venis?',
-                state: 'visto',
                 date: '15:34',
                 id: 33
             },
@@ -89,7 +87,6 @@ export const DATA_CONTACT = [
             {
                 author: 'Mollo',
                 text: 'EEEESA PAPAA!',
-                state: 'entregado',
                 date: '15:34',
                 id: 35
             },
@@ -176,7 +173,7 @@ export const DATA_CONTACT = [
             {
                 author: 'Yo',
                 text: 'charly, son las 4 de la mañana chabooon, igual no puedo no contestarte jaja',
-                state: 'entregado',
+                state: 'visto',
                 date: '04:12',
                 id: 34
             },

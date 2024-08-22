@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom'
 import { useGlobalContext } from '../../Components/GlobalContext/GlobalContext'
 import { Header, ListChat, WrittingText } from '../../Components'
 
-
 const Chat = () => {
 
   const { getContactDataById } = useGlobalContext()
@@ -13,7 +12,11 @@ const Chat = () => {
 
   return (
     <div className='chat'>
-      <Header userName={contactData.name} userImg={contactData.thumbnail} userId={contactData.id} userConection={contactData.lastConection} />
+      <Header userName={contactData.name} 
+              userImg={contactData.thumbnail} 
+              userId={contactData.id} 
+              userConection={contactData.lastConection} 
+      />
       <ListChat dataMessage={contactData.message} />
       <WrittingText contactData={contactData} />
     </div>

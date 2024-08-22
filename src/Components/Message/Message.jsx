@@ -5,7 +5,6 @@ const Message = ({ author, text, date, state }) => {
 
     return (
         <>
-
             <div className='chatContainer'>
                 {
                     author == 'Yo'
@@ -21,9 +20,10 @@ const Message = ({ author, text, date, state }) => {
                                 </div>
                             </div>
                         </div>
+
                         :
                         <div className='chatContainerOther'>
-                            <div className='otroMessage'>
+                            <div className='otherMessage'>
                                 <p className='messageContent'>{text}</p>
                                 <div className='footerMessage'>
                                     <span className='date'>{date}</span>

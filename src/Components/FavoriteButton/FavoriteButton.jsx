@@ -19,7 +19,6 @@ const FavoriteButton = () => {
                             <IoMdHeartEmpty />
                             <span className='addToFavoriteText'>Add to favorite</span>
                         </button>
-                        
                     </div>
                     :
                     <div className='addToFavorite'>
@@ -27,7 +26,6 @@ const FavoriteButton = () => {
                             <IoHeartDislikeOutline />
                             <span className='addToFavoriteText'>Remove from favorites</span>
                         </button>
-                    
                     </div>
             }
         </>

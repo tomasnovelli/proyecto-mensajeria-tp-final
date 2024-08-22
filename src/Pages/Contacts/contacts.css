@@ -4,13 +4,11 @@
     flex-direction: column;
     gap: 2px;
 }
-
 .contactSearch{
     display: flex;
     justify-content: center;
     margin: 10px 0px 5px 0px;
 }
-
 .contactSearchInput{
     width: 95%;
     height: 35px;
@@ -23,7 +21,6 @@
 .contactSearchInput:focus{
     outline: 1px solid var(--app-color) ;
 }
-
 .btn-addContact{
     background-color: var(--app-color);
     font-size: 25px;
@@ -37,7 +34,6 @@
     bottom: 78px;
     right: 25px;
 }
-
 
 @media screen and (min-width: 1200px) {
     .contactSearchInput{
@@ -54,7 +50,6 @@
         right: 45px;
         border-radius: 15px;
     }
-
 }
 
 @media screen and (min-width: 1680px){

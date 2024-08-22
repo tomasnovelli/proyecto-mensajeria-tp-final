@@ -7,8 +7,6 @@ import ChatDropdownMenu from '../ChatDropdownMenu/ChatDropdownMenu';
 import { FaCaretDown } from "react-icons/fa";
 import { useGlobalContext } from '../GlobalContext/GlobalContext';
 
-
-
 const User = ({ userName, userImg, userConection, userId }) => {
   const {
     dropdown,
@@ -28,17 +26,10 @@ const User = ({ userName, userImg, userConection, userId }) => {
               <img className='userImg' src={'/images/tomasUserImg.jpg'} alt={'yourImg'} />
             </div>
             <div className='interactiveButtons'>
-              {
-                dropdown &&
-                <button onClick={clearLocalStorage}>Clear LocalStorage</button>
-              }
-              <button className='btn-whatsapp' onClick= {handleOpenCloseDropDownMenu}>
                 <img className='whatsappIcon' src="/images/whatsApp.png" alt="whatsApp" width='100px' />
-                <FaCaretDown className='whatsappCaret' />
-              </button>
-              
             </div>
           </div>
+          
           :
           <div className='userInfoChat'>
             <div className='userData'>
@@ -46,7 +37,7 @@ const User = ({ userName, userImg, userConection, userId }) => {
               <div className='imgContainer'>
                 <img className='userImg' src={userImg} alt={userName + 'Img'} />
               </div>
-              <Link  to={'/chat/' + userId + '/info' } className='nameConection' onClick={handleCloseDropdown}>
+              <Link to={'/chat/' + userId + '/info'} className='nameConection' onClick={handleCloseDropdown}>
                 <span className='userName'>{userName}</span>
                 <span className='userConection'>{userConection}</span>
               </Link>

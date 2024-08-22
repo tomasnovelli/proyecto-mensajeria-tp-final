@@ -1,4 +1,3 @@
-
 .chatContainerYo{
     display: flex;
     justify-content: end;
@@ -11,8 +10,7 @@
 .checkSeen{
     color: rgb(0, 195, 255);
 }
-
-.otroMessage, .yoMessage{
+.otherMessage, .yoMessage{
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -22,52 +20,45 @@
     padding: 3px 10px 0px 10px;
     
 }
-
 .yoMessage{
     background-color: var(--chat-color);
 }
-
-.otroMessage{
+.otherMessage{
     background-color: var(--textArea-color);
 }
-
 .messageContent{
     font-size: 14px;
     padding: 7px 0px 3px 10px;
 
 }
-
 .footerMessage{
     display: flex;
     justify-content: end;
     gap: 2px;
 }
-
 .date{
     font-size: 13px;
 }
 
 @media screen and (min-width: 768px) {
-    
-    .otroMessage, .yoMessage{
+    .otherMessage, .yoMessage{
         max-width: 400px;
         margin: 0px 30px 10px 30px;
     }
 }
 
 @media screen and (min-width: 980px) {
-    .otroMessage, .yoMessage{
+    .otherMessage, .yoMessage{
         max-width: 450px;
         margin: 0px 50px 10px 50px;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .otroMessage, .yoMessage{
+    .otherMessage, .yoMessage{
         max-width: 450px;
         margin: 0px 190px 10px 190px;
     }
-
     .messageContent{
         font-size: 18px;
         padding: 7px 0px 10px 10px;
@@ -80,13 +71,11 @@
     }
 }
 
-
 @media screen and (min-width: 1680px) {
-    .otroMessage, .yoMessage{
+    .otherMessage, .yoMessage{
         max-width: 500px;
         margin: 0px 300px 10px 300px;
     }
-
     .messageContent{
         font-size: 25px;
         padding: 7px 0px 10px 10px;

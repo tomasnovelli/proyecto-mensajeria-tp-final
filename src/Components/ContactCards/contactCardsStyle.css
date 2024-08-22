@@ -14,7 +14,6 @@
     padding: 0px 25px 0px 25px;
     
 }
-
 .contactCard{
     width: 100%;
     display: flex;
@@ -34,13 +33,11 @@
     font-size: 13px;
     font-weight: 300;
 }
-
 .bottomContactCardInfo{
     width: 100%;
     font-size: 13px;
     font-weight: 300;
 }
-
 .lastMessage{
     display: flex;
     width: 65vw;
