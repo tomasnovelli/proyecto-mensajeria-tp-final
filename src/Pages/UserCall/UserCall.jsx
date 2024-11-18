@@ -33,7 +33,7 @@ const UserCall = () => {
                 <PiSpeakerSimpleHighBold />
                 <HiOutlineVideoCamera className='video' />
                 <LuMicOff className='mic' />
-                <Link className='btn-cutCallContainer' to={'/chat/' + id + '/info'}>
+                <Link className='btn-cutCallContainer' to={'/contacts/chat/' + id + '/info'}>
                     <ImPhoneHangUp className='btn-cutCall' />
                 </Link>
             </div>

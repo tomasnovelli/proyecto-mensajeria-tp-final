@@ -30,7 +30,7 @@ const ChatDropdownMenu = ({ userId }) => {
             {
                 dropdown &&
                 <div className='chatDropdownMenu'>
-                    <Link className='contactInfoLink' onClick={handleCloseDropdown} to={'/chat/' + userId + '/info'}>See Contact</Link>
+                    <Link className='contactInfoLink' onClick={handleCloseDropdown} to={'/contacts/chat/' + userId + '/info'}>See Contact</Link>
                     <button className='btn-cleanChat' onClick={borrarmessageDeContacto}>Clear Chat</button>
                 </div>
             }

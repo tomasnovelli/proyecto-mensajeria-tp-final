@@ -5,13 +5,15 @@ import { v4 as uuid } from 'uuid'
 const WrittingText = ({ contactData }) => {
 
   const { textInput, handleChangeContentValue, setTextInput, updateContact } = useGlobalContext()
+  const currentTime = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+  
   const handleSubmit = (e) => {
     e.preventDefault()
     const nuevoMensaje = {
       author: 'Yo',
       text: textInput,
       state: 'entregado',
-      date: '13:52',
+      date: currentTime, 
       id: uuid()
     }
     const updatedContactData = {

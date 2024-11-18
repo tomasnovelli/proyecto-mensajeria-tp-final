@@ -8,7 +8,7 @@ const AddContact = () => {
     return (
         <div className='addContactContainer'>
             <div className='addContactHeader'>
-                <Link to='/'><i className="backArrow bi bi-arrow-left-short"></i></Link>
+                <Link to='/contacts'><i className="backArrow bi bi-arrow-left-short"></i></Link>
                 <span className='addContactTitle'>Add New Contact</span>
             </div>
             <AddContactForm />

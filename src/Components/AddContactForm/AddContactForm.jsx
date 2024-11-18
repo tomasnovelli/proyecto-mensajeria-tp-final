@@ -82,7 +82,7 @@ const AddContactForm = () => {
             }
             setContactListData([...contactListData, newContactValues])
             updateContactDataBase(newContactValues)
-            navigate('/')
+            navigate('/contacts')
         }
     }
 

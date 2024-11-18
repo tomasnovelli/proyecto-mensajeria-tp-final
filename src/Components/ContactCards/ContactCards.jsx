@@ -20,7 +20,7 @@ const ContactCards = ({ contactData }) => {
             <div className='containerImg'>
                 <img src={thumbnail} alt={'img_' + name.toLowerCase()} />
             </div>
-            <Link className='contactCard' to={'/chat/' + id} onClick={handleCleanSearchInput}>
+            <Link className='contactCard' to={'/contacts/chat/' + id} onClick={handleCleanSearchInput}>
                 <div className='topContactCardInfo'>
                     <span>{name}</span>
                     <span className='lastConection'>{lastConection}</span>

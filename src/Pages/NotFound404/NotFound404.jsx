@@ -8,7 +8,7 @@ const NotFound404 = () => {
       <h2 className='error404'>OHH.. Error 404</h2>
       <img className='backTotheFutureImg' src="/images/back-to-future.jpeg" alt="backToTheFuture" />
       <h3 className='wrongTimeLine'>Wrong Time Line</h3>
-      <Link className='backToTheFutureLink' to='/'>Back To The Future</Link>
+      <Link className='backToTheFutureLink' to='/contacts'>Back To The Future</Link>
     </div>
   )
 }

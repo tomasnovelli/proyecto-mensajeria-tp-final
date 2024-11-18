@@ -26,7 +26,7 @@ const UserInfo = () => {
     return (
         <div className='userInfo'>
             <div className='userInfoHeader'>
-                <Link to={'/chat/' + id} onClick={handleCloseDropdown}><i className="backArrow bi bi-arrow-left-short"></i></Link>
+                <Link to={'/contacts/chat/' + id} onClick={handleCloseDropdown}><i className="backArrow bi bi-arrow-left-short"></i></Link>
                 <div className='userInfoCard'>
                     <div className='imgUser'>
                         <img src={thumbnail} alt="" />
@@ -34,7 +34,7 @@ const UserInfo = () => {
                     <h2>{name}</h2>
                     <span>{phoneCountryId + phoneNumber}</span>
                     <div className='btnFunctionContainer'>
-                        <Link to={'/chat/' + id + '/calling'} onClick={handleCloseDropdown}>
+                        <Link to={'/contacts/chat/' + id + '/calling'} onClick={handleCloseDropdown}>
                             <button className='btnFunction'>
                                 <i className="telephoneUser bi bi-telephone"></i>
                                 <span>Call</span>
@@ -45,7 +45,7 @@ const UserInfo = () => {
                 {
                     dropdown &&
                     <div className='chatDropdownMenu'>
-                        <Link className='contactInfoLink' to={'/'} onClick={handleCloseDropdown}>Contact List</Link>
+                        <Link className='contactInfoLink' to={'/contacts'} onClick={handleCloseDropdown}>Contact List</Link>
                     </div>
                 }
                 <button className='burgerMenu' onClick={handleOpenCloseDropDownMenu}>
